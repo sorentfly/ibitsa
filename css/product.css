@@ -1,0 +1,100 @@
+#image{
+
+}
+#productPage{
+    display: block;
+}
+#productContent{
+    margin-top: 7%;
+    margin-left: 5%;
+    display: flex;
+    width: 80%;
+
+}
+#image{
+    border: #cccccc solid 0.5px;
+}
+#description{
+    border: #cccccc solid 0.5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    background-color: rgba(186,142,234,0.21);
+    width: 40%;
+}
+#buy{
+    border: #cccccc solid 0.5px;
+    width: 28%;
+   height: 100%;
+    padding-bottom: 10px;
+}
+#price{
+
+    font-size: 24pt;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+#bBuy{
+    margin-top: 20px;
+    margin-left: 20px;
+    background-color: #7dd771;
+    color: white;
+    border: #7dd771;
+    width: 60%;
+    height: 10%;
+    font-size: 16pt;
+}
+#activity{
+    margin-top: 20px;
+    background-color:  rgba(117,234,53,0.21);
+    padding-left: 20px;
+}
+#activity span{
+    color: #13c62b;
+    font-size: 14pt;
+}
+#bBuy:active{
+    background-color: #9477c6;
+}
+#productInfo
+{
+    width: auto;
+    margin-left: 3%;
+    margin-right: 3%;
+    border-radius: 0.9px;
+    border: #5d5e5e solid ;
+}
+#commentary{
+    position: relative;
+    top: 10%;
+    width: 80%;
+    display:  inline-block;
+    margin-left: 5%;
+    margin-top: 1%;
+}
+#newComment{
+    width: 80%;
+    margin-left: 10%;
+    padding: 10px;
+    margin-top: 20px;
+    border: rgba(50,58,17,0.75) solid ;
+    text-align: center;
+}
+#commentItem{
+    border: #5d5e5e solid ;
+    display: flex;
+}
+#user{
+
+    position: relative;
+}
+#comment
+{
+    margin-left: 5px;
+    position: relative;
+}
+#comment span{
+    color: silver;
+}
+#statistic{
+    color: silver;
+}
