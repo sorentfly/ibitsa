@@ -20,7 +20,7 @@ if($_SESSION['id']==0)
     exit();
 }
 $count = 0;
-$mysqli=new mysqli("localhost","u656321276_dan","qwerty","u656321276_bitsa");
+$mysqli=new mysqli("localhost","root","","bitsa_tmp");
 $mysqli->query("SET NAMES 'utf8'");
 $id = $_SESSION['id'];
 $select =  $mysqli->query( "SELECT IdUserTo,IdUserFrom FROM Friends WHERE IdUserFrom = '$id'");
@@ -44,7 +44,7 @@ $jsonIndex = json_encode($arrayOfId);
 $mysqli->close();
 $image = $_SESSION['imgProduct'];
 
-$mysqli=new mysqli("localhost","u656321276_dan","qwerty","u656321276_bitsa");
+$mysqli=new mysqli("localhost","root","","bitsa_tmp");
 $select =  $mysqli->query( "SELECT Id_Product, NameProduct, Description, Price, RatingProduct, IdCategory FROM Products WHERE Image = '$image'");
 $row= $select->fetch_assoc();
     $idProduct = $row['Id_Product'];
@@ -62,17 +62,17 @@ if(isset($_POST['addComment']) && $_POST['+']!='')
     $summ = $_POST['='];
     $rate = $_POST['rate'];
     $tUs = $_POST['timeUsing'];
-    $mysqli = new mysqli("localhost", "u656321276_dan", "qwerty", "u656321276_bitsa");
+    $mysqli = new mysqli("localhost", "root", "", "bitsa_tmp");
     $mysqli->query("SET NAMES 'utf8'");
-    $insert_row = $mysqli->query("INSERT INTO `u656321276_bitsa`.`Product_Comment` ( IdUser, IdProduct, Likes, Dislikes, Sumary, Rating,TimeUse) VALUES('$id', '$idProduct', '$plus', '$minus', '$summ', '$rate','$tUs')");
+    $insert_row = $mysqli->query("INSERT INTO `bitsa_tmp`.`Product_Comment` ( IdUser, IdProduct, Likes, Dislikes, Sumary, Rating,TimeUse) VALUES('$id', '$idProduct', '$plus', '$minus', '$summ', '$rate','$tUs')");
     $mysqli->close();
     echo "<meta http-equiv='refresh' content='0'>";
 }
-$mysqli=new mysqli("localhost","u656321276_dan","qwerty","u656321276_bitsa");
+$mysqli=new mysqli("localhost","root","","bitsa_tmp");
 $select2 =  $mysqli->query( "SELECT * FROM Product_Comment WHERE IdProduct = '$idProduct'");
 while($row2= $select2->fetch_assoc()) {
     $userId = $row2['IdUser'];
-    $mysqli=new mysqli("localhost","u656321276_dan","qwerty","u656321276_bitsa");
+    $mysqli=new mysqli("localhost","root","","bitsa_tmp");
     $select3 =  $mysqli->query( "SELECT * FROM users WHERE Id_User = '$userId'");
     $row3 = $select3->fetch_assoc();
     $user[] = $row3['FirstName'].' '.$row3['SecondName'];

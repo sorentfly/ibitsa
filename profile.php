@@ -20,11 +20,13 @@ if($_SESSION['id']==0)
     exit();
 }
     $count = 0;
-    $mysqli=new mysqli("localhost","u656321276_dan","qwerty","u656321276_bitsa");
+    $mysqli=new mysqli("localhost","root","","bitsa_tmp");
     $mysqli->query("SET NAMES 'utf8'");
     $id = $_SESSION['id'];
     $select =  $mysqli->query( "SELECT IdUserTo,IdUserFrom FROM Friends WHERE IdUserFrom = '$id'");
     $selectUserInfo=$mysqli->query( "SELECT FirstName,SecondName,BirthDate,Sex,City FROM users WHERE Id_User = '$id'");
+    $arrayOfUsers = [];
+    $arrayOfId = [];
     while($row= $select->fetch_assoc())
     {
 
@@ -42,12 +44,12 @@ if($_SESSION['id']==0)
     $json = json_encode($arrayOfUsers);
     $jsonIndex = json_encode($arrayOfId);
     $mysqli->close();
-    while($row= $selectUserInfo->fetch_assoc()) {
-        $nameInfo = $row['FirstName'];
-        $secondNameInfo = $row['SecondName'];
-        $birthDay=$row['BirthDate'];
-        $cityInfo=$row['City'];
-        $nickInfo=$row['Nick'];
+    while($row = $selectUserInfo->fetch_assoc()) {
+        $nameInfo       = $row['FirstName']     ?? '';
+        $secondNameInfo = $row['SecondName']    ?? '';
+        $birthDay       = $row['BirthDate']     ?? '';
+        $cityInfo       = $row['City']          ?? '';
+        $nickInfo       = $row['Nick']          ?? '';
     }
 
 ?>

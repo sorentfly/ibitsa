@@ -10,7 +10,7 @@ session_start();
 $id = $_SESSION['id'];
 $j=0;
 $k=1;
-$mysqli=new mysqli("localhost","u656321276_dan","qwerty","u656321276_bitsa");
+$mysqli=new mysqli("localhost","root","","bitsa_tmp");
 $select =  $mysqli->query( "SELECT Name_object FROM Objects");
 while($row= $select->fetch_assoc())
 {
@@ -40,7 +40,7 @@ $mysqli->close();
             {
                 echo "<tr>";
                 echo "<th scope=\"col\">".$arrayOfObjects[$i]."</th>";
-                $mysqli=new mysqli("localhost","u656321276_dan","qwerty","u656321276_bitsa");
+                $mysqli=new mysqli("localhost","root","","bitsa_tmp");
                 $select =  $mysqli->query( "SELECT Grade FROM Grades,Objects WHERE Grades.IdObject='$k' AND .Objects.Id_object='$k'");
                 $k++;
                 while($row= $select->fetch_assoc())

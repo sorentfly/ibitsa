@@ -21,7 +21,7 @@ if($_SESSION['id']==0)
     exit();
 }
 $count = 0;
-$mysqli=new mysqli("localhost","u656321276_dan","qwerty","u656321276_bitsa");
+$mysqli=new mysqli("localhost","root","","bitsa_tmp");
 $mysqli->query("SET NAMES 'utf8'");
 $id = $_SESSION['id'];
 $select =  $mysqli->query( "SELECT IdUserTo,IdUserFrom FROM Friends WHERE IdUserFrom = '$id'");
@@ -45,7 +45,7 @@ $jsonIndex = json_encode($arrayOfId);
 $mysqli->close();
 $idUserTo = array();
 $id = $_SESSION['id'];
-$mysqli=new mysqli("localhost","u656321276_dan","qwerty","u656321276_bitsa");
+$mysqli=new mysqli("localhost","root","","bitsa_tmp");
 $mysqli->query("SET NAMES 'utf8'");
 $select1 =  $mysqli->query( "SELECT IdUserTo, IdUserFrom FROM Friends WHERE IdUserFrom = '$id'");
 $idUserTo[] = 0;

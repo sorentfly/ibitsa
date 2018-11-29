@@ -8,7 +8,7 @@
 
 header('Content-Type: text/html; charset=utf-8');//asd
 session_start();
-$mysqli=new mysqli("localhost","u656321276_dan","qwerty","u656321276_bitsa");
+$mysqli=new mysqli("localhost","root","","bitsa_tmp");
 
 $id = $_SESSION['id'];
 $arr = array();

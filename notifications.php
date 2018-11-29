@@ -21,9 +21,9 @@
         $CreateDate = date("Y.m.d");
         $StatusOn='1';
 
-        $mysqli=new mysqli("localhost","u656321276_dan","qwerty","u656321276_bitsa");
+        $mysqli=new mysqli("localhost","root","","bitsa_tmp");
         $mysqli->query("SET NAMES 'utf8'");
-        $insert_row = $mysqli->query("INSERT INTO `u656321276_bitsa`.`Notifications` ( NameNotification, TimeNotification, IdUser, CreateDate) VALUES('$Content', '$DateTime', ' $id', '$CreateDate')");
+        $insert_row = $mysqli->query("INSERT INTO `bitsa_tmp`.`Notifications` ( NameNotification, TimeNotification, IdUser, CreateDate) VALUES('$Content', '$DateTime', ' $id', '$CreateDate')");
         $update = $mysqli->query("UPDATE users SET StatusNotification = $StatusOn WHERE Id_User = $id");
         $mysqli->close();
     }

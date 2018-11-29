@@ -1,6 +1,6 @@
 <?php
 
-$mysqli=new mysqli("localhost","u656321276_dan","qwerty","u656321276_bitsa");
+$mysqli=new mysqli("localhost","root","","bitsa_tmp");
 $select =  $mysqli->query( "SELECT Name_object FROM Objects");
 while($row= $select->fetch_assoc())
 {
@@ -80,7 +80,7 @@ $mysqli->close();
 
     
 
-    $connect =new mysqli("localhost","u656321276_dan","qwerty","u656321276_bitsa");
+    $connect =new mysqli("localhost","root","","bitsa_tmp");
 
     if($connect->query("insert into Homework (Home_File) values ('$string')"))
         echo "1";

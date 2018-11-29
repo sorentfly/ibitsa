@@ -15,7 +15,7 @@ $hour = date("h");
 //$hour = $hour;
 $addDate=date("Y-m-d H:i:s");
 
-$connect =new mysqli("localhost","u656321276_dan","qwerty","u656321276_bitsa");
+$connect =new mysqli("localhost","root","","bitsa_tmp");
 $connect->query("SET NAMES 'utf8'");
 if($connect->query("insert into Messages (IdUserFrom,IdUserTo,Text,DateAdd) values ('$id','$idAdd','$text','$addDate')"))
     echo 1;

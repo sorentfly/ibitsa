@@ -1,1 +1,50 @@
-/.idea/*
+#### Folders with minor #
+#########################
+/install/               # Installation folder
+/private/               #
+/public/                # CSS/LESS/etc
+/temporary/             # Cache/User`s uploads/etc
+# Disregard intentionally
+!/temporary/development/#
+/vendor/                # Composer packages
+#########################
+
+
+######## Personal files #
+#########################
+/config.php             # File of configuration
+/composer.lock          # Composer lock file
+#########################
+
+
+#### OS generated files #
+#########################
+.DS_Store               #
+.DS_Store?              #
+._*                     #
+.Spotlight-V100         #
+.Trashes                #
+ehthumbs.db             #
+Thumbs.db               #
+#########################
+
+
+####### Compiled source #
+#########################
+*.com                   #
+*.class                 #
+*.dll                   #
+*.exe                   #
+*.o                     #
+*.so                    #
+#########################
+
+########## Special data #
+#########################
+/.idea/*                #
+
+.env                    #
+
+!/*/*/notignoremeplease #
+!/*/notignoremeplease   #
+#########################

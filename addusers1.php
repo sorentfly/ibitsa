@@ -10,7 +10,7 @@ session_start();
 $id=$_SESSION['id'];
 $idAdd = $_POST['idFriend'];
 $addDate=date("Y-m-d");   
-$connect =new mysqli("localhost","u656321276_dan","qwerty","u656321276_bitsa");
+$connect =new mysqli("localhost","root","","bitsa_tmp");
 
 if($connect->query("insert into Friends (IdUserFrom,IdUserTo,DateAdd) values ('$id','$idAdd','$addDate')"))
     echo "1";
