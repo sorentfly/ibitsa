@@ -1,0 +1,106 @@
+#content{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    z-index: 1000;
+}
+#addMessage {
+    position: fixed;
+    top: 10%;
+    background: #41D873;
+    display: block;
+    justify-content: center;
+    width: 455px;
+    height: 80%;
+    z-index: 100;
+    border-radius: 1.5em;
+}
+#closeButton{
+    position: relative;
+    right: 0px;
+    top: 0px;
+    background-color: red;
+    width: 25px;
+    height: 25px;
+}
+#addMessage form{
+    display: block;
+    position: relative;
+    bottom: 2%;
+    left: 10%;
+    width: 81%;
+}
+#addMessage form input[type = "button"] {
+    display: block;
+    width: 50%;
+    margin: 10px 0 0 22%;
+    background-color: #9477c6;
+    color: white;
+    border: 0;
+    padding: 20px;
+    font-size: 1.2rem;
+}
+#listOfMessages{
+    width: 45%;
+    background-color: white;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 15px;
+    overflow: scroll;
+}
+.messages{
+    border: #cccccc solid 1px;
+    width: 350px;
+    overflow: hidden;
+    height: 35px;
+}
+#addMessage form input[type = "button"]:hover{
+    background: #41c1c6;
+    cursor: pointer;
+}
+#listOfFriends{
+    z-index: 900;
+    background: #333;
+    position: fixed;
+    display: inline-block;
+    right: 0px;
+    max-height: 100%;
+    overflow-y:scroll;
+
+}
+.friends{
+    background-color: #7dd771;
+    position: relative;
+    right: 0px;
+    width: 250px;
+    height: 30px;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 14pt;
+    text-align: center;
+    padding: 10px;
+    padding-top: 20px;
+}
+.friends:hover{
+    cursor: pointer;
+    background-color: #9477c6;
+}
+#listOfFriends::-webkit-scrollbar {
+    display: none;
+}
+#bibbleThum{
+    background-color:#7dd771;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 14pt;
+    text-align: center;
+    padding: 10px;
+    padding-top: 20px;
+    position: relative;
+    height: 30px;
+    width: 250px;
+}
+#closeButton:hover{
+    cursor: pointer;
+}
+

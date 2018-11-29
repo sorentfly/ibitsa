@@ -1,0 +1,96 @@
+html {
+    background-color: #7dd771;
+}
+
+#divRegistration{
+    position: absolute;
+    right: 100px;
+    top:100px;
+}
+#divAuthorisation{
+    position: absolute;
+    left: 100px;
+    top:150px;
+}
+form{
+    max-width: 450px;
+    margin: 0 auto;
+}
+/* Radio - button */
+#divSex{
+    width: 100%;
+    border: 0;
+    padding: 20px 20px 20px 20px;
+    background: #eee;
+}
+form >#divSex > label {
+    font-weight: bold;
+    padding-right: 20px;
+    color: #5d5e5e;
+}
+/*Конец radio-button*/
+/* check-box */
+#boxBirth{
+    width: 100%;
+    border: 0;
+    padding: 20px 20px 20px 20px;
+    background: #eee;
+}
+#boxBirth select{
+    width: 24%;
+    height: 30px;
+    border: 0;
+    background: #eee;
+    font-weight: bold;
+    margin-left: 10px;
+    font-size: 13pt;
+    color: #5d5e5e;
+}
+/*Конец check-box*/
+form > .item > input {
+    width: 100%;
+    border: 0;
+    padding: 20px 20px 20px 50px;
+    background: #eee;
+    color: #5d5e5e;
+    font-size: 13pt;
+    font-weight: bold;
+}
+/* Дизайн каждого блока */
+form > .item {
+    position: relative;
+    background: white;
+    border-bottom: 1px solid #ccc;
+
+}
+/* Дизайн кнопки "Регистрация" */
+form input[type="submit"] {
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+    background: #41D873;
+    color: white;
+    border: 0;
+    padding: 20px;
+    font-size: 1.2rem;
+}
+form input[type="submit"]:hover{
+    background: #41c1c6;
+    cursor: pointer;
+}
+form input[type="submit"]:active{
+    background: #9477c6;
+    cursor: pointer;
+}
+/* Форма регистрации */
+form {
+    background: #333;
+    font-family: 'PT Sans', sans-serif;
+    padding: 20px;
+    width: 400px;
+}
+
+* {
+    box-sizing: border-box;
+    /*sdfsdf*/
+}
