@@ -8,6 +8,7 @@ else
     Link it with command \'ln {your-name}.config.php config.php\'.');
 
 # |- Require composer dependencies
+if (file_exists(APPLICATION_COMPOSER))
 include APPLICATION_COMPOSER;
 
 header('Last-Modified: ' . date('D, d M Y H:i:s', filemtime(__FILE__)) . ' GMT');
@@ -16,7 +17,7 @@ header('Last-Modified: ' . date('D, d M Y H:i:s', filemtime(__FILE__)) . ' GMT')
 # |- Redirect from sub-domain www.*
 if (strpos($_SERVER['HTTP_HOST'], 'www.')===0){
     $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? 'https' : 'http';
-    header('Location: '.$protocol.'://'.str_replace('www.', '',$_SERVER['HTTP_HOST']) .$_SERVER['REQUEST_URI']);
+    header('Location: '.$protocol.'://'.str_replace('www.', '',$_SERVER['HTTP_HOST']) . $_SERVER['REQUEST_URI']);
     die();
 }
 

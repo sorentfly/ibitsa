@@ -47,7 +47,7 @@ if (!defined('ENGINE_PATH_CONSTANTS')) {
     define('APPLICATION_PATH_SET',          APPLICATION_PATH_COR . DS . 'settings');
 
     defined('APPLICATION_COMPOSER')     ||
-    define('APPLICATION_COMPOSER',          APPLICATION_PATH . 'vendor' . DS . 'autoload.php');
+    define('APPLICATION_COMPOSER',          APPLICATION_PATH . DS . 'vendor' . DS . 'autoload.php');
     # |---- Paths [END]
 
 
