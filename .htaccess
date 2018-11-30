@@ -5,6 +5,11 @@ AddDefaultCharset utf-8
   RewriteEngine On
 
   RedirectMatch 403 ^/\.
+  RedirectMatch 403 ^/temporary
+
+  # Get rid of index.php
+  RewriteCond %{REQUEST_URI} /index\.php
+  RewriteRule (.*) index.php?rewrite=2 [L,QSA]
 
   # Rewrite all directory-looking urls
   RewriteCond %{REQUEST_URI} /$
@@ -19,7 +24,7 @@ AddDefaultCharset utf-8
   # If the file doesn't exist, rewrite to index
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^(.*)$ index.php [L,QSA]
+  RewriteRule ^(.*)$ index.php?rewrite=1 [L,QSA]
 
 </IfModule>
 

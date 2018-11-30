@@ -1,0 +1,21 @@
+Zend/Cache/Backend/Memcached.php (backport of ZF-8856 and ZF-9376) -- j
+Zend/Db/Adapter/Mysqli.php (Modified _connect() to support socket connections in the PORT field, or in the HOST field) -- sp
+Zend/Db/Adapter/Mysqli.php (Modified-client lib compat) -- j
+Zend/Db/Select.php (php 5.1 compat) -- j
+Zend/Db/Table/Row/Abstract.php (fix for _postInsert() issue, removal of _transformColumn calls) -- j
+Zend/Db/Table/Select.php (strcmp tostr php 5.1 compat) -- j
+Zend/Exception.php (Modified) -- j
+Zend/Filter/HtmlEntities.php (htmlentities php 5.1 compat) -- j
+Zend/Form/Decorator/Description.php (Modified desc class name) -- a
+Zend/Locale/Data.php (tostring php 5.1 compat, added method to access defaultnumberingsystem) -- j
+Zend/Mail/Transport/Abstract.php (backport of ZF-7874)
+Zend/Navigation/Page.php (Modified hashCode() for 5.1 compat) -- sp
+Zend/Navigation/Page/Mvc.php (Modified-twice) -- j
+Zend/Search/Lucene/Storage/File.php (Fixed ioncube errors) -- j
+Zend/Search/Lucene/Storage/File/Memory.php (Fixed ioncube errors) -- j
+Zend/Service/Amazon/Abstract.php (Removing region limitations) -- j
+Zend/Service/ReCaptcha.php (Added tabindex support) -- j
+Zend/Translate/Adapter.php (disabled strlen() conditional on line 164; modified for custom.csv loading last & only CSV files) -- sp
+Zend/Translate/Adapter.php (fixed pluralization issue with non-plural languages) -- j
+Zend/View/Abstract.php (PHP 5.1 compat) -- j
+Zend/View/Helper/Placeholder/Container/Abstract.php (added function ksort() for 5.1 compat) -- sp

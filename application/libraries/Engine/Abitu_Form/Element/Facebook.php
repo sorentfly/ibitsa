@@ -1,0 +1,18 @@
+<?php
+class Abitu_Form_Element_Facebook extends Zend_Form_Element_Text
+{
+    public function loadDefaultDecorators()
+    {
+        if ($this->loadDefaultDecoratorsIsDisabled())
+        {
+            return;
+        }
+
+        $decorators = $this->getDecorators();
+        if (empty($decorators))
+        {
+            $this->addDecorator('ViewHelper')
+                ->addDecorator('DivDivDivWrapper');
+        }
+    }
+}
