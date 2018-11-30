@@ -46,7 +46,7 @@ abstract class Core_Controller_Action_Helper_RequireAbstract extends Zend_Contro
      */
     public function forward()
     {
-        // Stolen from Zend_Controller_Action::_forward
+        // Stolen from Zend_Controller_Action::forward
         list($action, $controller, $module) = $this->getErrorAction();
         $request = $this->getActionController()->getRequest();
 

@@ -31,12 +31,16 @@
 // require_once 'Zend/Loader.php';
 
 /**
- * * @property Zend_Layout layout
- * * @property Zend_Controller_Action_Helper_Url url
- * * @property Zend_Controller_Action_Helper_ContextSwitch contextSwitch
- * * @property Zend_Controller_Action_Helper_Redirector redirector
- * * @property Zend_Controller_Action_Helper_ViewRenderer viewRenderer
- * * @property Engine_Content_Controller_Action_Helper_Content content
+ * * @property Zend_Layout                                      layout
+ * * @property Zend_Controller_Action_Helper_Url                url
+ * * @property Zend_Controller_Action_Helper_ContextSwitch      contextSwitch
+ * * @property Zend_Controller_Action_Helper_Redirector         redirector
+ * * @property Zend_Controller_Action_Helper_ViewRenderer       viewRenderer
+ * * @property Engine_Content_Controller_Action_Helper_Content  content
+ *
+ * * @method   Core_Controller_Action_Helper_RequireUser        requireUser()
+ * * @method Authorization_Controller_Action_Helper_RequireAuth requireAuth()
+ * * @method   Zend_Layout                                      layout()
  *
  * @category   Zend
  * @package    Zend_Controller

@@ -2,6 +2,8 @@
 
 /**
  * @property string salt
+ * @property string enabled
+ * @property string birthdate
  */
 class User_Model_User extends Core_Model_Item_Abstract
 {
@@ -20,10 +22,14 @@ class User_Model_User extends Core_Model_Item_Abstract
 
     const DELETED_USERNAME = "Пользователь удалён";
 
-    /* For NO users in `engine4_core_search` table*/
+    /**
+     * For NO users in `engine4_core_search` table
+     */
     protected $_searchTriggers = false;
 
-    /*Multidomain hacks*/
+    /**
+     * Multi-domain hacks
+     */
     protected static $_domainSettings = null;
 
     protected static function getDS($property){

@@ -1,0 +1,1 @@
+<?=$this->translate('Your message has been sent successfully.'); ?>

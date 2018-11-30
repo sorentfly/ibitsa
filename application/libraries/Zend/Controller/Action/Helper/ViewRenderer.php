@@ -949,7 +949,7 @@ class Zend_Controller_Action_Helper_ViewRenderer extends Zend_Controller_Action_
      * Only autorenders if:
      * - _noRender is false
      * - action controller is present
-     * - request has not been re-dispatched (i.e., _forward() has not been called)
+     * - request has not been re-dispatched (i.e., forward() has not been called)
      * - response is not a redirect
      *
      * @return void

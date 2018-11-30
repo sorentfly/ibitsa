@@ -205,7 +205,7 @@ class Core_Controller_Action_Helper_FormSequence extends Zend_Controller_Action_
         return $done;
     }
 
-    protected function _forward($action, $controller = null, $module = null, array $params = null)
+    protected function forward($action, $controller = null, $module = null, array $params = null)
     {
         $request = $this->getActionController()->getRequest();
 

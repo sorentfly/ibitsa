@@ -1,0 +1,1 @@
+<div id="profile_photo"><?=$this->itemPhoto($this->subject()); ?></div>

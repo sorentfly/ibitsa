@@ -711,39 +711,6 @@ abstract class Zend_Controller_Action implements Zend_Controller_Action_Interfac
      * @param string $module
      * @param array $params
      * @return void
-     * @deprecated Deprecated as of Zend Framework 1.7. Use
-     *             forward() instead.
-     */
-    final protected function _forward($action, $controller = null, $module = null, array $params = null)
-    {
-        $this->forward($action, $controller, $module, $params);
-    }
-
-    /**
-     * Forward to another controller/action.
-     *
-     * It is important to supply the unformatted names, i.e. "article"
-     * rather than "ArticleController".  The dispatcher will do the
-     * appropriate formatting when the request is received.
-     *
-     * If only an action name is provided, forwards to that action in this
-     * controller.
-     *
-     * If an action and controller are specified, forwards to that action and
-     * controller in this module.
-     *
-     * Specifying an action, controller, and module is the most specific way to
-     * forward.
-     *
-     * A fourth argument, $params, will be used to set the request parameters.
-     * If either the controller or module are unnecessary for forwarding,
-     * simply pass null values for them before specifying the parameters.
-     *
-     * @param string $action
-     * @param string $controller
-     * @param string $module
-     * @param array $params
-     * @return void
      */
     final public function forward($action, $controller = null, $module = null, array $params = null)
     {

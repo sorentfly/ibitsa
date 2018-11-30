@@ -1,0 +1,453 @@
+.form-label label b {
+    margin-left: 3px;
+}
+
+.form-elements {
+    width: 95%;
+}
+
+.global_form .form-element .description{float: none;}
+
+.global_form .form-element select{max-width: none;}
+
+.form-wrapper-heading {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+h4 {
+    border-bottom: none !important;
+}
+
+.help {
+    border-radius: 9px;
+}
+
+.help:hover {
+    box-shadow: 0 0 3px rgba(34, 211, 16, 1);
+    -moz-box-shadow: 0 0 3px rgba(34, 211, 16, 1);
+    -webkit-box-shadow: 0 0 3px rgba(34, 211, 16, 1);
+    cursor: pointer;
+}
+
+#main_tabs li {
+    cursor: pointer;
+    padding: 0 20px 0 0;
+}
+
+#main_tabs li.active {
+    cursor: default;
+}
+
+.profile_form {
+    margin: 10px 0 130px;
+    padding: 0 10px 10px;
+}
+
+.profile_form hr {
+    background: #DEE4E8;
+    height: 1px;
+    margin-bottom: 15px;
+}
+
+.profile_form .add_education {
+    border-bottom: 1px black dotted;
+    color: black;
+    cursor: pointer;
+    display: inline-block
+}
+
+.profile_form .add_education:hover {
+    border-bottom-color: red;
+    color: red;
+}
+
+
+.profile_form .form-elements > .hidden {
+    display: none;
+}
+
+.profile_form .field_correct {
+    color: red;
+    font-weight: bold;
+    margin: 3px 0;
+}
+
+.profile_form #calendar_button {
+    margin-left: 4px;
+}
+
+.profile_form #calendar_button:hover {
+    cursor: pointer;
+}
+
+.profile_form label b,
+.profile_form span b {
+    color: #555;
+}
+
+.profile_form button[type="reset"] {
+    -moz-box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+    -webkit-box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+    background: none;
+    border: none;
+    border-bottom: 1px #555 dotted;
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+    color: #555;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    text-shadow: none;
+    white-space: nowrap;
+}
+
+.profile_form button[type="reset"]:hover {
+    border-bottom-color: red;
+    color: red;
+    cursor: pointer;
+}
+
+.profile_form input[type="number"],
+.profile_form select,
+.profile_form input[type="tel"] {
+    min-width: 200px;
+}
+
+
+.profile_form input[type="checkbox"] {
+    width: auto;
+}
+
+.profile_form .form_example {
+    border-bottom: 1px #555 dotted;
+}
+
+.profile_form .form_example:hover {
+    border-bottom-color: red;
+    color: red;
+    cursor: pointer;
+}
+
+.profile_form.success {
+    color: green;
+}
+
+.profile_form .fail {
+    color: red;
+}
+
+.social hr {
+    background: #ccc;
+    float: left;
+    height: 1px;
+    margin-bottom: 15px;
+}
+
+.social .vk_profile_button {
+    padding: 15px 10px;
+}
+
+.social .social_profile_block {
+    padding: 30px 10px;
+}
+
+.social .social_buttons button {
+    -moz-box-shadow: 0 0 0 rgba(255, 255, 255, 0) !important;
+    -webkit-box-shadow: 0 0 0 rgba(255, 255, 255, 0) !important;
+    background: none !important;
+    border: none !important;
+    border-bottom: 1px #555 dotted !important;
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0) !important;
+    color: #555 !important;
+    cursor: pointer;
+    font-weight: normal !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-shadow: none !important;
+    white-space: nowrap !important;
+}
+
+.social .social_buttons button:hover {
+    border-bottom-color: red !important;
+    color: red !important;
+}
+
+.triangle:before {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid #feffd6;
+    height: 0;
+    left: 23px;
+    top: -10px;
+    width: 0;
+}
+
+.triangle {
+    text-align: left;
+}
+
+.form-next {
+    margin-left: 30px;
+}
+
+.form-previous {
+    margin: -3px 30px 0 0;
+}
+
+.form-next,
+.form-previous {
+    height: 27px;
+}
+
+.form-next:hover,
+.form-previous:hover {
+    background-color: #7eb6d5;
+}
+
+.form-next:after,
+.form-next::after,
+.form-previous:before,
+.form-previous::before {
+    content: '';
+    display: inline-block;
+    height: 16px;
+    vertical-align: middle;
+    width: 16px;
+}
+
+.form-next:after,
+.form-next::after {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4IiB2aWV3Qm94PSIwIDAgMTYgMTYiIHZlcnNpb249IjEuMSI+PHBhdGggZD0iTTE1NCwxMDcgTDE0NCwxMDcgTDE0NCwxMDEgTDE1NCwxMDEgTDE1NCw5OCBMMTYwLDEwNCBMMTU0LDExMCBMMTU0LDEwNyBMMTU0LDEwNyBaIE0xNTQsMTA3IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTQ0LjAwMDAwMCwgLTk2LjAwMDAwMCkiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+);
+    margin: -2px -5px 0 8px;
+}
+
+.form-previous:before,
+.form-previous::before {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4IiB2aWV3Qm94PSIwIDAgMTYgMTYiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PHBhdGggc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9IiNmZmZmZmYiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTEwMiwxMDcgTDExMiwxMDcgTDExMiwxMDEgTDEwMiwxMDEgTDEwMiw5OCBMOTYsMTA0IEwxMDIsMTEwIEwxMDIsMTA3IEwxMDIsMTA3IFogTTEwMiwxMDciIHRyYW5zZm9ybT0idHJhbnNsYXRlKC05Ni4wMDAwMDAsIC05Ni4wMDAwMDApIj48L3BhdGg+PC9zdmc+);
+    margin-right: 5px;
+}
+
+.form-previous:first-child,
+.form-next:last-child {
+ display : none;
+}
+
+a.olympic_main:before,
+a.olympic_main::before {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTYgMTYiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeG1sbnM6c2tldGNoPSJodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2gvbnMiPg0KICAgIDxnIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPg0KICAgICAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtOTYuMDAwMDAwLCAtOTYuMDAwMDAwKSIgZmlsbD0iIzM3NkJCMyI+DQogICAgICAgICAgICA8cGF0aCBkPSJNMTAyLDEwNyBMMTEyLDEwNyBMMTEyLDEwMSBMMTAyLDEwMSBMMTAyLDk4IEw5NiwxMDQgTDEwMiwxMTAgTDEwMiwxMDcgTDEwMiwxMDcgWiBNMTAyLDEwNyI+PC9wYXRoPg0KICAgICAgICA8L2c+DQogICAgPC9nPg0KPC9zdmc+);
+    margin-right: 10px;
+    content: '';
+    display: inline-block;
+    height: 30px;
+    vertical-align: -25%;
+    width: 30px;
+}
+
+a.olympic_main {
+    color: #3474B9;
+    display: inline-block;
+    font-size: 1.8em;
+}
+
+a.olympic_main:hover {
+    color: red;
+    text-decoration: none;
+}
+
+a.olympic_main:hover:before,
+a.olympic_main:hover::before {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTYgMTYiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeG1sbnM6c2tldGNoPSJodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2gvbnMiPg0KICAgIDxnIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPg0KICAgICAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtOTYuMDAwMDAwLCAtOTYuMDAwMDAwKSIgZmlsbD0icmVkIj4NCiAgICAgICAgICAgIDxwYXRoIGQ9Ik0xMDIsMTA3IEwxMTIsMTA3IEwxMTIsMTAxIEwxMDIsMTAxIEwxMDIsOTggTDk2LDEwNCBMMTAyLDExMCBMMTAyLDEwNyBMMTAyLDEwNyBaIE0xMDIsMTA3Ij48L3BhdGg+DQogICAgICAgIDwvZz4NCiAgICA8L2c+DQo8L3N2Zz4=);
+}
+
+a.olympic_main img {
+    vertical-align: -25%;
+}
+
+input:hover + .custom-combobox-toggle {
+    background-color: #E1E8ED;
+    border-left-color: #C0CAD5;
+}
+
+#EditPhoto {
+    margin: 0 auto 20px;
+    width: 720px;
+}
+
+.item_nophoto {
+    border: 1px solid #ddd !important;
+}
+
+#Filedata {
+    display: none;
+}
+
+.file_choose_block {
+    -webkit-transition: border-color 0.5s linear, background-color 0.5s linear;
+    -moz-transition: border-color 0.5s linear, background-color 0.5s linear;
+    -o-transition: border-color 0.5s linear, background-color 0.5s linear;
+    background: transparent no-repeat 80px -2px;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiIgaGVpZ2h0PSIxMjBweCIgd2lkdGg9IjgwcHgiPjxwYXRoIGZpbGw9IiNBRUIxQjQiIGQ9Ik0yIDcgSDUgVjEyIEgxMSBWNyBIMTQgTDggMSBNMTUgMTMgVjE1IEgxIFYxMyIvPjwvc3ZnPg==);
+    background-position: 75px 0;
+    border: 2px dashed rgba(0, 0, 0, .2);
+    box-sizing: border-box;
+    color: #777;
+    cursor: pointer;
+    height: 120px;
+    margin: 20px auto !important;
+    padding: 15px;
+    text-align: center;
+    transition: border-color 0.5s linear, background-color 0.5s linear;
+}
+
+.file_choose_block:hover {
+    border-color: rgba(0, 0, 0, .5);
+    color: black;
+}
+
+.file_choose_block.filedrag {
+    background-color: #DBFFDB;
+}
+
+.file-info {
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.file_label {
+    color: #3474B9;
+    cursor: pointer;
+}
+
+.file_label:hover {
+    color: red;
+}
+
+.file_choose_instruction {
+    margin: 10px auto;
+    text-align: center;
+}
+
+.file_choose_title {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.file_choose_title_denied {
+    color: red;
+}
+
+.file_buttons {
+    margin: 25px auto 10px !important;
+    text-align: center;
+}
+
+.file_choose_description {
+    text-align: center;
+}
+
+.form-end {
+    height: 15px !important;
+    padding: 0.4em .8em !important;
+}
+
+.photo-remove {
+    margin-left: 30px;
+}
+
+.photo-cancel {
+    margin-left: 60px;
+    vertical-align: 20px;
+}
+
+.user_photo {
+    margin: 20px 0 0;
+}
+
+.user_photo th {
+    padding: 0 0 10px;
+}
+
+.current_avatar,
+.new_avatar {
+    text-align: center;
+    width: 200px;
+}
+
+.user_photo .thumb_row td {
+    text-align: left;
+}
+
+.current_new {
+    text-align: center;
+    vertical-align: middle;
+    width: 50px;
+}
+
+.social_remove_button {
+    border-radius: 0;
+}
+
+#thumbnail-controller {
+    float: none;
+    margin-top: 5px;
+}
+
+.photo_darg_area {
+    background: #F5F5F5;
+    border-top: 1px solid #CCC;
+    color: #777;
+}
+
+.social_profiles .form-wrapper .form-label,
+.social_profiles .form-wrapper .form-label a {
+    text-align: center;
+}
+
+.lasso-button,
+.lasso-apply,
+.lasso-cancel {
+    border-bottom: 1px #000 dotted;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+}
+
+.lasso-apply {
+    margin-right: 10px;
+}
+
+.lasso-cancel {
+    margin-left: 10px;
+}
+
+.lasso-button:hover,
+.lasso-apply:hover,
+.lasso-cancel:hover {
+    border-bottom-color: red;
+    color: red;
+}
+
+.form-wrapper[id^="buttons"][id$="-wrapper"] hr
+{
+    display:none;
+}
+
+.form-wrapper[id^="buttons"][id$="-wrapper"]  .form-wrapper
+{
+    display:inline-block;
+    max-width:200px;
+}
+#required_notice-wrapper {
+    margin-bottom: 25px;
+}
+
+.core_form_join legend{
+	font-weight: bold;    
+	font-size: 1.2em;
+    margin-bottom: 0.4em;}
+
+select.mulitext-theme-select
+{
+    width: 100px !important;
+}

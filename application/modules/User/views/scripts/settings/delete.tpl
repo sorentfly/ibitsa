@@ -1,0 +1,1 @@
+<?php echo !empty($this->form) ? $this->form->setAttrib('id', 'user_form_settings_delete')->render($this) : '' ?>

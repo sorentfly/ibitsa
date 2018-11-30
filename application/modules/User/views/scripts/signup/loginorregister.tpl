@@ -1,0 +1,1 @@
+<p style='padding:20px;font-size:150%; text-align:center;' > <a href='signup' >Зарегистрироваться</a>  или <br>  <a href='login'>Войти</a> </p>

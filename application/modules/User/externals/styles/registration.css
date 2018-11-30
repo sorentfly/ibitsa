@@ -1,0 +1,408 @@
+.form-label label b {
+    margin-left: 3px;
+}
+
+.form-elements {
+    width: 95%;
+}
+
+.form-wrapper-heading {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.registration_cancel {
+    color: #3366FF !important;
+    font-size: 17px;
+    text-decoration: none !important;
+}
+
+.registration_cancel:hover {
+    color: red !important;
+}
+
+#password_difficulty_block_triangle {
+    background: url(../../externals/images/ddtooltip.png) no-repeat;
+    height: 6px;
+    position: absolute;
+    z-index: 21;
+    width: 16px;
+}
+
+#password_difficulty_block,
+#help_captcha_block {
+    background: white;
+    border: 1px solid #AEBDCC;
+    font-weight: normal;
+    height: auto;
+    margin: 15px 0 0;
+    max-width: 250px;
+    min-height: 50px;
+    min-width: 100px;
+    padding: 8px;
+    position: absolute;
+    width: auto;
+    z-index: 20;
+}
+
+#password_difficulty_block {
+    font-size: .8em;
+    margin: 6px 0 0 167px;
+    padding: 10px 35px 0 10px;
+}
+
+#help_captcha {
+    margin: 3px 0 0 7px;
+    position: absolute;
+}
+
+#help_captcha_block {
+    font-size: .8em;
+    margin: 0 0 0 249px;
+    padding: 10px 20px 10px 10px;
+}
+
+#help_captcha_block i {
+    background: url(../../externals/images/ddtooltip.png) no-repeat;
+    display: block;
+    height: 6px;
+    margin: -16px 0 0 7px;
+    position: absolute;
+    width: 16px;
+}
+
+#help_captcha_block a {
+    color: #3366FF !important;
+    text-decoration: underline !important;
+}
+
+#help_captcha_block a:hover {
+    color: red !important;
+}
+
+#help_captcha_close {
+    border: none;
+    display: block;
+    font-size: 1.8em;
+    height: 17px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 4px;
+    top: -2px;
+    width: 17px;
+}
+
+#help_captcha_close:hover {
+    color: red;
+    cursor: pointer;
+}
+
+#password_difficulty_close {
+    border: none;
+    display: block;
+    font-size: 1.8em;
+    height: 17px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 4px;
+    top: 0;
+    width: 17px;
+}
+
+#password_difficulty_close:hover {
+    color: red;
+    cursor: pointer;
+}
+
+#password_difficulty_content img {
+    left: 50%;
+    margin-left: -8px;
+    position: absolute;
+
+}
+
+#password_difficulty_content img:hover {
+    cursor: default;
+}
+
+.help:hover {
+    box-shadow: 0 0 3px rgba(34, 211, 16, 1);
+    -moz-box-shadow: 0 0 3px rgba(34, 211, 16, 1);
+    -webkit-box-shadow: 0 0 3px rgba(34, 211, 16, 1);
+    cursor: pointer;
+}
+
+#registration_form {
+    margin: 10px 0;
+    padding: 15px 10px 10px;
+}
+
+#registration_form iframe {
+    border: 2px #C8D5EE inset;
+    background-color: white;
+    height: 250px;
+    margin: 5px auto;
+    width: 100%;
+}
+
+#registration_form .license_agreement {
+    text-align: center;
+    padding: 0 5px;
+    width: 100%;
+}
+
+#registration_form .password-options {
+    float: left;
+    display: none;
+    padding: 0 5px;
+}
+
+#registration_form .password-options p {
+    font-size: .8em;
+    margin: 0 !important;
+    padding: 1px !important;
+}
+
+#registration_form h3 {
+    margin-bottom: 10px;
+}
+
+#email_status {
+    display: inline-block;
+    padding: 3px 0 0;
+    position: absolute;
+}
+
+#password_confirm_status {
+    display: inline-block;
+    padding: 2px 5px;
+}
+
+#email_status b {
+    padding-left: 5px;
+}
+
+#email_status .success {
+    font-size: 18px;
+}
+
+#registration_form .field_correct {
+    color: red;
+    font-weight: bold;
+    margin: 3px 0;
+}
+
+#calendar_button {
+    cursor: pointer;
+    margin: 3px 0 0 4px;
+    position: absolute;
+    opacity: .8;
+}
+
+#calendar_button:hover {
+    opacity: 1;
+}
+
+#password_choose,
+#password_show_hide {
+    border-bottom: 1px #555 dotted;
+}
+
+#password_choose:hover,
+#password_show_hide:hover {
+    border-bottom-color: red;
+    color: red;
+    cursor: pointer;
+}
+
+#registration_form label b,
+#registration_form span b {
+    color: red;
+}
+
+#registration_form button[type="reset"] {
+    -moz-box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+    -webkit-box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+    background: none;
+    border: none;
+    border-bottom: 1px #555 dotted;
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+    color: #555;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    text-shadow: none;
+    white-space: nowrap;
+
+}
+
+#registration_form button[type="reset"]:hover {
+    border-bottom-color: red;
+    color: red;
+    cursor: pointer;
+}
+
+#registration_form select {
+    min-width: 226px;
+}
+
+#registration_form input[type="checkbox"] {
+    width: auto;
+}
+
+#registration_form .form_example {
+    border-bottom: 1px #555 dotted;
+}
+
+#registration_form .form_example:hover {
+    border-bottom-color: red;
+    color: red;
+    cursor: pointer;
+}
+
+#password_difficulty {
+    font-weight: bold;
+    margin: 6px 0;
+}
+
+#red_line,
+#yellow_line,
+#green_line {
+    height: 8px;
+    z-index: 2;
+}
+
+#password_line {
+    background: url(../images/user/password_line.gif);
+    height: 8px;
+    margin: 8px 0 0;
+    max-width: 206px;
+    padding: 0;
+    width: 100%;
+}
+
+#red_line {
+    background: url(../images/user/password_line_red.gif);
+}
+
+#yellow_line {
+    background: url(../images/user/password_line_yellow.gif);
+}
+
+#green_line {
+    background: url(../images/user/password_line_green.gif);
+}
+
+#registration_form label[for="terms"] {
+    float: left !important;
+}
+
+#registration_form label[for="terms"]:hover {
+    cursor: default;
+}
+
+#user_agreement {
+    border-bottom: 1px #555 dotted;
+    color: #555;
+    display: inline-block;
+}
+
+#user_agreement:hover {
+
+    border-bottom-color: red;
+    color: red;
+    cursor: pointer;
+    text-decoration: none !important;
+}
+
+#registration_form .success {
+    color: green;
+}
+
+#registration_form .fail {
+    color: red;
+}
+
+#password_difficulty_button {
+    margin: 2px 4px;
+    position: absolute;
+}
+
+#password_difficulty_button:hover {
+    cursor: pointer;
+}
+
+#recaptcha_widget {
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    background: white;
+    border-color: #999 #ccc #ccc #999;
+    border-radius: 3px;
+    border-width: 1px;
+}
+
+#recaptcha_widget #recaptcha_image {
+    margin: 4px auto;
+}
+
+#registration_form .recaptcha_reload {
+    font-size: 16px;
+    margin: 7px 0;
+    text-align: center;
+}
+
+#recaptcha_reload span {
+    border-bottom: 1px black dotted;
+}
+
+#recaptcha_reload span:hover {
+    border-color: red;
+    color: red;
+    cursor: pointer;
+}
+
+#recaptcha_reload_pic:hover {
+    cursor: pointer;
+}
+
+#registration_form label {
+    float: right;
+}
+
+.triangle {
+    text-align: left;
+}
+
+#referral-label {
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+#referral-element {
+    font-weight: bold;
+    margin-top: 3px;
+    padding-bottom: 5px;
+}
+
+#submit {
+    margin: 10px 0 0;
+}
+
+.message_element {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+#registration_form label
+{
+    color: #AAA;
+}
+#registration_form label b
+{
+    display:none;
+}

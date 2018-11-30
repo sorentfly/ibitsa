@@ -29,9 +29,11 @@ class Core_Bootstrap extends Engine_Application_Bootstrap_Abstract
         }
 
         // Production
-        if( APPLICATION_ENV === 'production' ) {
-            error_reporting(E_ALL & ~E_STRICT & ~E_DEPRECATED);
-        }
+        error_reporting(
+            ( APPLICATION_ENV === 'production' )
+                ? 0
+                : E_ALL & ~E_STRICT & ~E_DEPRECATED
+        );
     }
 
     public function run(Zend_Controller_Request_Http $request = null)
@@ -50,6 +52,7 @@ class Core_Bootstrap extends Engine_Application_Bootstrap_Abstract
             $request = new Zend_Controller_Request_Http();
         }
         $front->setRequest($request);
+        die('snow');
 
         /*Bitsa - rewrite URLs*/
         if (!_ENGINE_CONSOLE_APP && ($rewriteRule = Engine_Api::_()->getItemTable('urlrewrite')->matchRewrite($_SERVER['HTTP_HOST'], $_SERVER['REQUEST_URI'])) ){
@@ -57,10 +60,10 @@ class Core_Bootstrap extends Engine_Application_Bootstrap_Abstract
             $front->setRequest($request);
             $front->getRouter()->route($request);
         }
-
+        die('fire');
 
         // Start main
-        die('kavo');
+
         $front->setParam('bootstrap', $this);
                             # DIRTY PART GOES HERE <----
         $front->dispatch();

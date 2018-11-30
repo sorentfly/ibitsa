@@ -70,12 +70,12 @@ class Engine_ServiceLocator_Backend_DbTable extends Engine_ServiceLocator_Backen
 
     return $this;
   }
-  
-  /**
-   * Get configured database adapter
-   * 
-   * @return Zend_Db_Adapter_Abstract
-   */
+
+    /**
+     * Get configured database adapter
+     * @return Zend_Db_Adapter_Abstract
+     * @throws Engine_ServiceLocator_Exception
+     */
   public function getDbAdapter()
   {
     if( null === $this->_dbAdapter ) {
@@ -88,13 +88,14 @@ class Engine_ServiceLocator_Backend_DbTable extends Engine_ServiceLocator_Backen
 
     return $this->_dbAdapter;
   }
-  
-  /**
-   * Set database adapter
-   * 
-   * @param Zend_Db_Adapter_Abstract $dbAdapter
-   * @return Engine_ServiceLocator_Backend_DbTable 
-   */
+
+    /**
+     * Set database adapter
+     *
+     * @param Zend_Db_Adapter_Abstract $dbAdapter
+     * @return Engine_ServiceLocator_Backend_DbTable
+     * @throws Engine_ServiceLocator_Exception
+     */
   public function setDbAdapter($dbAdapter)
   {
     if( !($dbAdapter instanceof Zend_Db_Adapter_Abstract) ) {
@@ -105,12 +106,12 @@ class Engine_ServiceLocator_Backend_DbTable extends Engine_ServiceLocator_Backen
 
     return $this;
   }
-  
-  /**
-   * Get configured database table
-   * 
-   * @return Zend_Db_Table_Abstract|string
-   */
+
+    /**
+     * Get configured database table
+     * @return string|Zend_Db_Table_Abstract
+     * @throws Engine_ServiceLocator_Exception
+     */
   public function getDbTable()
   {
     if( null === $this->_dbTable ) {
@@ -123,13 +124,14 @@ class Engine_ServiceLocator_Backend_DbTable extends Engine_ServiceLocator_Backen
       throw new Engine_ServiceLocator_Exception('Invalid database table');
     }
   }
-  
-  /**
-   * Set database table
-   * 
-   * @param Zend_Db_Table_Abstract $dbTable
-   * @return Engine_ServiceLocator_Backend_DbTable 
-   */
+
+    /**
+     * Set database table
+     *
+     * @param Zend_Db_Table_Abstract $dbTable
+     * @return Engine_ServiceLocator_Backend_DbTable
+     * @throws Engine_ServiceLocator_Exception
+     */
   public function setDbTable($dbTable)
   {
     if( is_string($dbTable) ) {
@@ -212,12 +214,12 @@ class Engine_ServiceLocator_Backend_DbTable extends Engine_ServiceLocator_Backen
   
   
   // Utility
-  
-  /**
-   * Load the resource configuration
-   * 
-   * @return void
-   */
+
+    /**
+     * Load the resource configuration
+     * @return void
+     * @throws Engine_ServiceLocator_Exception
+     */
   protected function _load()
   {
     $table = $this->getDbTable();

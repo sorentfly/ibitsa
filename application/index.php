@@ -104,15 +104,6 @@ if (!_ENGINE_CONSOLE_APP){
             die();
         }
     }
-    /*non abitu.net social login - redirect to page, loginned from*/
-    if (!empty($_REQUEST['socialLoginned'])
-        && !empty($_COOKIE['socialWalkPath'])
-        && mb_strpos($_COOKIE['socialWalkPath'], 'socialLoginned=')===false/*prevent infinity*/){
-        header('Cache-Control: no-cache, no-store, must-revalidate');
-        header('Location: '. $_COOKIE['socialWalkPath']);
-        die();
-    }
-    # |- END: CROSS DOMAIN AUTH
 
     # |- https <-> http requests enable, cross origin between self domains
     if (!empty($_SERVER['HTTP_ORIGIN'])){
@@ -218,10 +209,6 @@ if (_ENGINE_R_INIT) {
     );
     Engine_Application::setInstance($application);
     Engine_Api::getInstance()->setApplication($application);
-//    var_dump($application->getAutoloader());
-//    var_dump($application->getBootstrap());
-    var_dump(Engine_Api::getInstance());
-    die();
 }
 
 if( _ENGINE_CONSOLE_APP ) {
@@ -248,7 +235,7 @@ if (_ENGINE_R_MAIN) {                                               # |- Sub app
     # |- Bootstrap required module
     $application->bootstrap();
     # |- Fatal catching
-    include_once ENGINE_FATAL_HANDLER;
+    require_once ENGINE_FATAL_HANDLER;
     # |- Run an application
     $application->run();
 }

@@ -114,7 +114,7 @@ if (!defined('ENGINE_CONF__GENERAL')) {
     defined('_ENGINE_R_REWRITE')        ||
     define('_ENGINE_R_REWRITE',             FALSE);
     defined('_ENGINE_R_CONF')           ||
-    define('_ENGINE_R_CONF',                TRUE);
+    define('_ENGINE_R_CONF',                FALSE);
     defined('BITSA_SOURCE')             ||
     define('BITSA_SOURCE',                  'https://github.com/sorentfly/ibitsa');
     defined('BITSA_SITE_LOCALE')        ||
@@ -129,9 +129,18 @@ if (!defined('ENGINE_CONF__GENERAL')) {
     defined('MOSCOW_TIMEZONE_OFFSET')   ||
     define('MOSCOW_TIMEZONE_OFFSET',        10800);
     defined('NAMES_HTML_PATTERN')       ||
-    define('NAMES_HTML_PATTERN',            '^(([A-z]+([-\s]?[A-z]+)?){1}|([А-яЁё]+([-\s]?[А-яЁё]+)?){1})$');
+    define('NAMES_HTML_PATTERN',            trim(json_encode('^(([A-z]+([-\s]?[A-z]+)?){1}|([А-яЁё]+([-\s]?[А-яЁё]+)?){1})$')));
     defined('NAMES_PATTERN')            ||
-    define('NAMES_PATTERN',                 DS . NAMES_HTML_PATTERN . DS);
+    define('NAMES_PATTERN',                 '#^(([A-z]+([-\s]?[A-z]+)?){1}|([А-яЁё]+([-\s]?[А-яЁё]+)?){1})$#u');
+
+    defined('USERNAME_PATTERN')         ||
+    define('USERNAME_PATTERN',              "#^([a-zA-Z][-\s']{0,1}([a-zA-Z]+[-\s']{0,1})*[a-zA-Z])$|^([а-яА-ЯёЁ][-\s']{0,1}([а-яА-ЯёЁ]+[-\s']{0,1})*[а-яА-ЯёЁ])$#u");
+    defined('USERNAME_PATTERN_HTML')    ||
+    define('USERNAME_PATTERN_HTML',         trim(json_encode("^([a-zA-Z][- ']{0,1}([a-zA-Z]+[- ']{0,1})*[a-zA-Z])$|^([А-яЁё][- ']{0,1}([А-яЁё]+[- ']{0,1})*[А-яЁё])$"), '"') );
+    defined('USERNAME_PATTERN_RU')      ||
+    define('USERNAME_PATTERN_RU',           "#^([а-яА-ЯёЁ][-\s']{0,1}([а-яА-ЯёЁ]+[-\s']{0,1})*[а-яА-ЯёЁ])$#u");
+    defined('USERNAME_PATTERN_HTML_RU') ||
+    define('USERNAME_PATTERN_HTML_RU',      trim(json_encode("^([А-яЁё][- ']{0,1}([А-яЁё]+[- ']{0,1})*[А-яЁё])$"), '"') );
     # |---- Patterns [END]
 
 

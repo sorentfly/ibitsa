@@ -222,7 +222,7 @@ abstract class Core_Controller_Action_Standard extends Engine_Controller_Action
 
         switch ($this->_helper->contextSwitch->getCurrentContext()) {
             case 'smoothbox':
-                return $this->_forward('success', 'utility', 'core', array(
+                return $this->forward('success', 'utility', 'core', array(
                     'messages' => array($message),
                     'smoothboxClose' => true,
                     'redirect' => $to
@@ -236,104 +236,6 @@ abstract class Core_Controller_Action_Standard extends Engine_Controller_Action
             default:
                 return $this->_helper->redirector->gotoUrl($to, $options);
                 break;
-        }
-    }
-
-    public function yandex_antispam_request($message_data = [])
-    {
-        $send_data = 'key=' . YANDEX_ANTISPAM_KEY;
-        foreach ($message_data as $data_key => $data_value)
-        {
-            $send_data .= '&' . $data_key . '=' . $data_value;
-        }
-        $current_request = curl_init('http://cleanweb-api.yandex.ru/1.0/check-spam');
-        $options = array(CURLOPT_RETURNTRANSFER => 1, CURLOPT_FOLLOWLOCATION => 1);
-
-        $options[CURLOPT_POST] = true;
-        $options[CURLOPT_POSTFIELDS] = $send_data;
-
-
-        curl_setopt_array($current_request, $options);
-
-        $result = curl_exec($current_request);
-
-
-        $http_response_code = curl_getinfo($current_request, CURLINFO_HTTP_CODE);
-        if ($http_response_code !== 200)
-        {
-            return array('status' => false, 'reason' => $http_response_code);
-        }
-        curl_close($current_request);
-
-        $antispam_xml = new SimpleXMLElement($result);
-        if ((string) $antispam_xml->text['spam-flag'] === 'yes') //Возможно, спам — нужно принять меры
-        {
-            return array('status' => true, 'spam' => true, 'spam_check_id' => (string) $antispam_xml->id);
-        }
-        else
-        {
-            return array('status' => true, 'spam' => false, 'spam_check_id' => (string) $antispam_xml->id);
-        }
-    }
-
-    public function yandex_get_captcha_request($yandex_antispam_check_id)
-    {
-        if (Zend_Registry::get('Locale')->__toString() === 'en')
-        {
-            $captcha_type = 'estd';
-        }
-        else
-        {
-            $captcha_type = 'std';
-        }
-
-        $current_request = curl_init('http://cleanweb-api.yandex.ru/1.0/get-captcha?key=' . YANDEX_ANTISPAM_KEY . '&id=' . $yandex_antispam_check_id . '&type=' . $captcha_type);
-        $options = array(CURLOPT_RETURNTRANSFER => 1, CURLOPT_FOLLOWLOCATION => 1);
-
-        curl_setopt_array($current_request, $options);
-
-        $result = curl_exec($current_request);
-
-
-        $http_response_code = curl_getinfo($current_request, CURLINFO_HTTP_CODE);
-        if ($http_response_code !== 200)
-        {
-            return array('status' => false, 'reason' => $http_response_code);
-        }
-        curl_close($current_request);
-        $captcha_xml = new SimpleXMLElement($result);
-        $captcha_code = (string) $captcha_xml->captcha;
-        $captcha_url = (string) $captcha_xml->url;
-
-        return array('status' => true, 'captcha_code' => $captcha_code, 'captcha_url' => $captcha_url);
-    }
-
-    //Проверка капчи
-    private function yandex_check_captcha_request($request_code, $captcha_code, $captcha_value)
-    {
-        $current_request = curl_init('http://cleanweb-api.yandex.ru/1.0/check-captcha?key=' . YANDEX_ANTISPAM_KEY . '&id=' . $request_code . '&captcha=' . $captcha_code . '&value=' . $captcha_value);
-        $options = array(CURLOPT_RETURNTRANSFER => 1, CURLOPT_FOLLOWLOCATION => 1);
-
-        curl_setopt_array($current_request, $options);
-
-        $result = curl_exec($current_request);
-        $http_response_code = curl_getinfo($current_request, CURLINFO_HTTP_CODE);
-        if ($http_response_code !== 200)
-        {
-            return array('status' => false, 'reason' => $http_response_code);
-        }
-        curl_close($current_request);
-        if (preg_match('/<ok><\/ok>/', $result) !== 0)
-        {
-            return array('status' => true, 'correct' => true);
-        }
-        else if (preg_match('/<failed><\/failed>/', $result) !== 0)
-        {
-            return array('status' => true, 'correct' => false);
-        }
-        else
-        {
-            return array('status' => false);
         }
     }
 
