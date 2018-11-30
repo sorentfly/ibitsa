@@ -308,8 +308,8 @@ class Core_Api_Core extends Core_Api_Abstract
         }
         $domains = Engine_Api::_()->core()->getDomainsSettings();
         if (!isset($_SERVER['HTTP_HOST'])){
-            $domains['abitu']['key'] = 'abitu';
-            return self::$nowDomainSets = $domains['abitu'];
+            $domains['bitsa']['key'] = 'bitsa';
+            return self::$nowDomainSets = $domains['bitsa'];
         }
         $activeDomain = null;
         foreach($domains as $key=>$domain){
@@ -319,9 +319,9 @@ class Core_Api_Core extends Core_Api_Abstract
                 return self::$nowDomainSets = array_merge($domain, array('key'=>$key)) ;
             }
         }
-        $domains['abitu']['key'] = 'abitu';
+        $domains['bitsa']['key'] = 'bitsa';
 
-        return self::$nowDomainSets = $domains['abitu'];
+        return self::$nowDomainSets = $domains['bitsa'];
     }
 
     public function getDomainFilter()

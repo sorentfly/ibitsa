@@ -72,7 +72,7 @@ class Engine_View_Helper_FormTinyMce extends Zend_View_Helper_FormTextarea
             unset($attribs['editorOptions']);
         }
         $this->view->tinyMce()->render();
-        /* NOTE abitu: it is very important to keep autocomplete="off" attribute, otherwise value can remember without saving */
+        /* NOTE bitsa: it is very important to keep autocomplete="off" attribute, otherwise value can remember without saving */
         $xhtml = '<textarea rows=24, cols=80, style="width:553px;"  autocomplete="off" name="' . $this->view->escape($name) . '"'
                 . ' id="' . $this->view->escape($id) . '"'
                 . $disabled

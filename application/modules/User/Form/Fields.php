@@ -50,8 +50,8 @@ class User_Form_Fields extends Zend_Form
 
     public static function enableForm(Zend_Form $form)
     {
-        $form->addPrefixPath('Abitu_Form_Decorator', 'Engine/Abitu_Form/Decorator', 'decorator')
-            ->addPrefixPath('Abitu_Form_Element', 'Engine/Abitu_Form/Element', 'element');
+        $form->addPrefixPath('Bitsa_Form_Decorator', 'Engine/Bitsa_Form/Decorator', 'decorator')
+            ->addPrefixPath('Bitsa_Form_Element', 'Engine/Bitsa_Form/Element', 'element');
     }
 
     public function loadDefaultDecorators()

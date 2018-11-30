@@ -191,7 +191,7 @@ class User_Model_User extends Core_Model_Item_Abstract
     {
         if (!self::$_academyStatusNamespace){
             $DS = Engine_Api::_()->core()->getNowDomainSettings();
-            self::$_academyStatusNamespace = !empty($DS['academyNamespace']) ? $DS['academyNamespace'] : 'abitu_academy_status';
+            self::$_academyStatusNamespace = !empty($DS['academyNamespace']) ? $DS['academyNamespace'] : 'bitsa_academy_status';
         }
         return self::$_academyStatusNamespace;
     }

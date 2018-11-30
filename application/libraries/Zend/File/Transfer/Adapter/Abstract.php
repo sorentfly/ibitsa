@@ -955,7 +955,7 @@ abstract class Zend_File_Transfer_Adapter_Abstract
             }
 
 
-            /*modified by goncharov for abitu.net */
+            /*modified by goncharov for bitsa.net */
             $rustolat = array(
                 'жё' => 'zho',  // жёлоб -> zholob
                 'жю' => 'zhu',  // жюри -> zhuri

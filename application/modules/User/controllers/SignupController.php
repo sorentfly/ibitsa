@@ -38,7 +38,7 @@ class User_SignupController extends Core_Controller_Action_Standard
         
         $domain = Engine_Api::_()->core()->getNowDomainSettings();
         $this->view->enableSocials = $enableSocials = empty($domain['login_socials_disabled']);
-        $this->view->isSubsite = $domain['key'] != 'abitu';
+        $this->view->isSubsite = $domain['key'] != 'bitsa';
                 
         if ($enableSocials){
             $vkAppId = $settings->getSetting('core.vk.appid');
@@ -324,7 +324,7 @@ class User_SignupController extends Core_Controller_Action_Standard
 
             $_SESSION['first_visit'] = true;
 
-            if(!empty($_SESSION['registration_info']) && !empty($_SESSION['registration_info']['user_photo']) ) { /* Загружаем фото из сторонней соц. сети в Abitu */
+            if(!empty($_SESSION['registration_info']) && !empty($_SESSION['registration_info']['user_photo']) ) { /* Загружаем фото из сторонней соц. сети в bitsa */
                 try{
                     $file_url = $_SESSION['registration_info']['user_photo'];
                     $file_paths = explode('/', $file_url);

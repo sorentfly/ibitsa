@@ -18,7 +18,7 @@
                 </a>
             </div>
             <? if($this->viewer->isSelf($this->user)): ?>
-                <input id="abitu-vk-link" type="hidden" value="<?=$this->vk_link;?>"/>
+                <input id="bitsa-vk-link" type="hidden" value="<?=$this->vk_link;?>"/>
                 <div class="form-element social_buttons vk_profile_button" id="vk_profile_button">
                     <? if(empty($this->social_profiles[0]['vk_id'])): ?>
                         <a href="<?=$this->vk_link;?>"><?=$this->translate('Add');?></a>
@@ -40,7 +40,7 @@
         <div class="form-wrapper">
             <div class="form-label"><a href="https://www.facebook.com" target="_blank"><img class="social_logo" height="56" src="/application/modules/User/externals/images/facebook.png" width="150"/></a></div>
             <div class="form-element social_buttons social_profile_block" id="fb_profile_button">
-                <input id="abitu-fb-link" type="hidden" value="<?=$this->fb_link;?>"/>
+                <input id="bitsa-fb-link" type="hidden" value="<?=$this->fb_link;?>"/>
                 <? if(empty($this->social_profiles[0]['fb_id'])){ ?>
                     <? if ($this->viewer->isSelf($this->user)){ ?>
                         <a href="<?=$this->fb_link;?>" title="<?=$this->translate('Link profile');?>"><?=$this->translate('Add');?></a>
@@ -61,7 +61,7 @@
                 <a href="https://mipt.ru" target="_blank"><img class="social_logo" height="60" src="https://mipt.ru/images/tablo<? if($this->locale()->getLocale()->__toString() !== 'en'):?>_ru<? endif; ?>.png" width="150"/></a>
             </div>
             <? if($this->viewer->isSelf($this->user)): ?>
-                <input id="abitu-mipt-link" type="hidden" value="<?=$this->mipt_link;?>"/>
+                <input id="bitsa-mipt-link" type="hidden" value="<?=$this->mipt_link;?>"/>
                 <div class="form-element social_buttons social_profile_block" id="mipt_profile_button">
                     <? if( empty($this->social_profiles[0]['mipt_id']) ): ?>
                         <a href="<?=$this->mipt_link;?>"><?=$this->translate('Add');?></a>
@@ -81,7 +81,7 @@
                     <a href="https://ya.ru" target="_blank"><img class="social_logo" height="60" src="/application/modules/User/externals/images/YA_logo<? if($this->locale()->getLocale()->__toString() === 'en'): ?>_eng<? endif; ?>.png" width="150"/></a>
                 </div>
                 <? if($this->viewer->isSelf($this->user)): ?>
-                    <input id="abitu-ya-link" type="hidden" value="<?=$this->ya_link;?>"/>
+                    <input id="bitsa-ya-link" type="hidden" value="<?=$this->ya_link;?>"/>
                     <div class="form-element social_buttons social_profile_block" id="ya_profile_button">
                         <? if( empty($this->social_profiles[0]['yandex_id']) ): ?>
                             <a href="<?=$this->ya_link;?>" title="<?=$this->translate('Link profile');?>"><?=$this->translate('Add');?></a>
@@ -107,7 +107,7 @@
             <div class="form-wrapper">
                 <div class="form-label"><a href="https://google.ru" target="_blank"><img class="social_logo" height="51" src="/application/modules/User/externals/images/google_logo_flat_print_medium.png" width="143"/></a></div>
                 <? if($this->viewer->isSelf($this->user)): ?>
-                    <input id="abitu-google-link" type="hidden" value="<?=$this->google_link;?>"/>
+                    <input id="bitsa-google-link" type="hidden" value="<?=$this->google_link;?>"/>
                     <div class="form-element social_buttons social_profile_block" id="google_profile_button">
                         <? if( empty($this->social_profiles[0]['google_id']) ): ?>
                             <a href="<?=$this->google_link;?>" title="<?=$this->translate('Link profile');?>"><?=$this->translate('Add');?></a>
@@ -133,7 +133,7 @@
             <div class="form-wrapper">
                 <div class="form-label"><a href="https://mail.ru" target="_blank"><img class="social_logo" height="63" src="/application/modules/User/externals/images/mailru_medium.png" width="150"/></a></div>
                 <? if($this->viewer->isSelf($this->user)): ?>
-                    <input id="abitu-mailru-link" type="hidden" value="<?=$this->mailru_link;?>"/>
+                    <input id="bitsa-mailru-link" type="hidden" value="<?=$this->mailru_link;?>"/>
                     <div class="form-element social_buttons social_profile_block" id="mailru_profile_button">
                         <? if( empty($this->social_profiles[0]['mailru_id']) ): ?>
                             <a href="<?=$this->mailru_link;?>" title="<?=$this->translate('Link profile');?>"><?=$this->translate('Add');?></a>
@@ -159,7 +159,7 @@
             <div class="form-wrapper">
                 <div class="form-label"><a href="https://odnoklassniki.ru" target="_blank"><img class="social_logo" height="49" src="/application/modules/User/externals/images/ok.png" width="150"/></a></div>
                 <? if($this->viewer->isSelf($this->user)): ?>
-                    <input id="abitu-ok-link" type="hidden" value="<?=$this->ok_link;?>"/>
+                    <input id="bitsa-ok-link" type="hidden" value="<?=$this->ok_link;?>"/>
                     <div class="form-element social_buttons social_profile_block" id="ok_profile_button">
                         <? if( empty($this->social_profiles[0]['ok_id']) ): ?>
                             <a href="<?=$this->ok_link;?>" title="<?=$this->translate('Link profile');?>"><?=$this->translate('Add');?></a>

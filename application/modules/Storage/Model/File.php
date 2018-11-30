@@ -59,7 +59,7 @@ class Storage_Model_File extends Core_Model_Item_Abstract
 
   public function getHref()
   {
-    //Abitu edit: goncharov: for correct file get for test DB - add original http link
+    //bitsa edit: goncharov: for correct file get for test DB - add original http link
     return $this->getStorageService()->map($this);
   }
 
@@ -108,7 +108,7 @@ class Storage_Model_File extends Core_Model_Item_Abstract
   public function map()
   {
     $uri = $this->getStorageService()->map($this);
-    /*fix a bug - abitu*/
+    /*fix a bug - bitsa*/
     if (_ENGINE_SSL && strpos($uri, 'http:') === 0){
         $uri = str_replace('http:', 'https:', $uri);
     }
@@ -121,11 +121,11 @@ class Storage_Model_File extends Core_Model_Item_Abstract
         $uri .= '?t=' . dechex(substr( strtotime($this->modified_date), -5));
     }
 
-    if (defined('ENABLE_OLDFILE_ABSOLUTE_PATH_TO_ABITU') && defined('OLDFILE_LIMIT_DATE') && ENABLE_OLDFILE_ABSOLUTE_PATH_TO_ABITU
+    if (defined('ENABLE_OLDFILE_ABSOLUTE_PATH_TO_bitsa') && defined('OLDFILE_LIMIT_DATE') && ENABLE_OLDFILE_ABSOLUTE_PATH_TO_bitsa
         && strpos($uri, 'http://') !== 0 && strpos($uri, 'https://') !== 0 && strpos($uri, '//') !== 0
        ){
           if (strtotime($this->creation_date)  <= strtotime(OLDFILE_LIMIT_DATE)){
-              return ENABLE_OLDFILE_ABSOLUTE_PATH_TO_ABITU . $uri;
+              return ENABLE_OLDFILE_ABSOLUTE_PATH_TO_bitsa . $uri;
           }
     }
     /*ABSOLUTE PATH end*/

@@ -18,8 +18,8 @@ class User_Form_Special_AbsolutePortfolio extends Engine_Form
             ->setTitle('Регистрация слушателей');
 
         $this
-            ->addPrefixPath('Abitu_Form_Decorator', 'Engine/Abitu_Form/Decorator', 'decorator')
-            ->addPrefixPath('Abitu_Form_Element', 'Engine/Abitu_Form/Element', 'element');
+            ->addPrefixPath('Bitsa_Form_Decorator', 'Engine/Bitsa_Form/Decorator', 'decorator')
+            ->addPrefixPath('Bitsa_Form_Element', 'Engine/Bitsa_Form/Element', 'element');
 
         /*$lastname = $this->createElement('Text', 'lastname', array(
             'label' => 'Last Name',

@@ -756,7 +756,7 @@ function popstateAction()
         document.getElementById("people_search_field").focus();
     }
 
-    var standartInputs = ['email', 'phone', 'school_reference_status', 'abitu_academy_status', 'zftsh_academy_status'];
+    var standartInputs = ['email', 'phone', 'school_reference_status', 'bitsa_academy_status', 'zftsh_academy_status'];
     for(var i =0;i<standartInputs.length;i++){
         if (standartInputs[i] in url_keys){
             jQuery('.search-filters [name="' + standartInputs[i] + '"]').val(url_keys[ standartInputs[i] ]);

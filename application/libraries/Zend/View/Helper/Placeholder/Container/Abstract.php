@@ -113,7 +113,7 @@ abstract class Zend_View_Helper_Placeholder_Container_Abstract extends ArrayObje
     }
     
     /**
-     * Reset values (ABITU FIX)
+     * Reset values (bitsa FIX)
      *
      * @return void
      */

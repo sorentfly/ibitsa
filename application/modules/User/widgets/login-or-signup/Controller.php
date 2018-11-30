@@ -13,7 +13,7 @@ class User_Widget_LoginOrSignupController extends Engine_Content_Widget_Abstract
             $this->view->authorized = true;/* if true - render iframe for cross-domain auth change only*/
             $timeOfLogin = isset($_COOKIE["lastLoginTime"]) ? (int)$_COOKIE["lastLoginTime"] : 0;
             $timeOfCrossdomaiUpdate = isset($_COOKIE["lastCrossdomaiUpdateTime"]) ? (int)$_COOKIE["lastCrossdomaiUpdateTime"] : 0;
-            if ( (time() - $timeOfLogin <= 40 || time() - $timeOfCrossdomaiUpdate >= 1800) && $_SERVER['HTTP_HOST'] != ABITU_SITE)
+            if ( (time() - $timeOfLogin <= 40 || time() - $timeOfCrossdomaiUpdate >= 1800) && $_SERVER['HTTP_HOST'] != bitsa_SITE)
             {//able to PHP ses id cookie on central domain only during 20 secs
                  setcookie('lastCrossdomaiUpdateTime', time(), 0, '/');
             }else{

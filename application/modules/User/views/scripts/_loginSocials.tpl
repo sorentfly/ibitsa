@@ -1,9 +1,9 @@
 <?
     $domSet = Engine_Api::_()->core()->getNowDomainSettings();
-    $domainTo = $domSet['key'] == 'abitu' ? '' : $domSet['key'];
+    $domainTo = $domSet['key'] == 'bitsa' ? '' : $domSet['key'];
     $_SESSION['crossDomainSocialAuthDomain'] = $domainTo;
             
-    $base_href = rtrim((constant('_ENGINE_SSL') ? 'https://' : 'http://') . ABITU_SITE . '/');
+    $base_href = rtrim((constant('_ENGINE_SSL') ? 'https://' : 'http://') . bitsa_SITE . '/');
     $redirectBackPath =  '&backpath='. urlencode($_SERVER['REQUEST_URI']);
             
     $settings = Engine_Api::_()->getApi('settings', 'core');
@@ -13,7 +13,7 @@
     $vk_redirect_uri = $base_href . 'simple_api/social_auth.php?method=vk_auth';
     $mipt_redirect_uri = $base_href . 'simple_api/social_auth.php?method=mipt_auth';
     /*NOTE: доступ к приложению гугла все проебали! А там надо http и https отдельно прописывать, не убирать протокол, иначе не бдет работать при https!*/
-    $google_redirect_uri = 'http://'. ABITU_SITE . '/simple_api/social_auth.php?method=google_auth';
+    $google_redirect_uri = 'http://'. bitsa_SITE . '/simple_api/social_auth.php?method=google_auth';
     $mailru_redirect_uri = $base_href . 'simple_api/social_auth.php?method=mailru_auth';
     $twitter_redirect_uri = $base_href . 'simple_api/social_auth.php?method=twitter_auth';
     $facebook_redirect_uri = $base_href . 'simple_api/social_auth.php?method=facebook_auth';

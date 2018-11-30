@@ -233,7 +233,7 @@ class User_Form_Signup_Account extends User_Form_Fields
         }
 
         $this->getView()->headScript()->captureStart();
-        echo 'jQuery(function(){window.abituCaptcha.insert.before("terms");});';
+        echo 'jQuery(function(){window.bitsaCaptcha.insert.before("terms");});';
         $this->getView()->headScript()->captureEnd();
     }
 
@@ -262,8 +262,8 @@ class User_Form_Signup_Account extends User_Form_Fields
             'postgraduate' => 'Высшее',
         ]);
 
-        $this->addPrefixPath('Abitu_Form_Decorator', 'Engine/Abitu_Form/Decorator', 'decorator')
-            ->addPrefixPath('Abitu_Form_Element', 'Engine/Abitu_Form/Element', 'element');
+        $this->addPrefixPath('Bitsa_Form_Decorator', 'Engine/Bitsa_Form/Decorator', 'decorator')
+            ->addPrefixPath('Bitsa_Form_Element', 'Engine/Bitsa_Form/Element', 'element');
 
         $this->addElement('Country', 'country', ['label' => 'Страна']);
         $this->country->setAttrib('placeholder', 'Выберите страну')->setAttrib('required', 'required');
@@ -325,10 +325,10 @@ class User_Form_Signup_Account extends User_Form_Fields
             $this->mobilephone->setValue('');
         }
         $commonValid = parent::isValid($data);
-        if (  !isset($_SESSION['abitu_captcha'])
-            || empty($data['abitu_captcha'])
-            || empty($data['abitu_captcha'])
-            || $data['abitu_captcha'] != $_SESSION['abitu_captcha'] ) {
+        if (  !isset($_SESSION['bitsa_captcha'])
+            || empty($data['bitsa_captcha'])
+            || empty($data['bitsa_captcha'])
+            || $data['bitsa_captcha'] != $_SESSION['bitsa_captcha'] ) {
             return false;
         }
         return $commonValid;

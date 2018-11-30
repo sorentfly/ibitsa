@@ -17,8 +17,8 @@ class User_Form_Special_AddPlatform extends Engine_Form
             ->setMethod('POST')
             ->setTitle('Стать площадкой проведения контрольной');
 
-        $this->addPrefixPath('Abitu_Form_Decorator', 'Engine/Abitu_Form/Decorator', 'decorator')
-            ->addPrefixPath('Abitu_Form_Element', 'Engine/Abitu_Form/Element', 'element');
+        $this->addPrefixPath('Bitsa_Form_Decorator', 'Engine/Bitsa_Form/Decorator', 'decorator')
+            ->addPrefixPath('Bitsa_Form_Element', 'Engine/Bitsa_Form/Element', 'element');
 
 
 

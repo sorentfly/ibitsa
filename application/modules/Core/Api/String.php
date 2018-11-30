@@ -256,8 +256,8 @@ class Core_Api_String extends Core_Api_Abstract
      */
     public function sslReplace($input){
         /* КОСТЫЛЬик для подгрузки изображений вставленных через tinymce на локалке*/
-        if (defined('ENABLE_OLDFILE_ABSOLUTE_PATH_TO_ABITU') && defined('OLDFILE_LIMIT_DATE') && ENABLE_OLDFILE_ABSOLUTE_PATH_TO_ABITU){
-            $input = preg_replace(['@(src\s*=\s*["\'])(/public/jbimages_images)@i', '@(url\s*\(\s*["\']?)(/public/jbimages_images)@i'], '$1https:'.ENABLE_OLDFILE_ABSOLUTE_PATH_TO_ABITU.'/public/jbimages_images', $input);
+        if (defined('ENABLE_OLDFILE_ABSOLUTE_PATH_TO_bitsa') && defined('OLDFILE_LIMIT_DATE') && ENABLE_OLDFILE_ABSOLUTE_PATH_TO_bitsa){
+            $input = preg_replace(['@(src\s*=\s*["\'])(/public/jbimages_images)@i', '@(url\s*\(\s*["\']?)(/public/jbimages_images)@i'], '$1https:'.ENABLE_OLDFILE_ABSOLUTE_PATH_TO_bitsa.'/public/jbimages_images', $input);
         }
         /*Замер показал 1/10000 секунды - всё ок, можно не париться по поводу скорости.*/
         return preg_replace(['@(src\s*=\s*["\'])(http:)@i', '@(url\s*\(\s*["\']?)(http:)@i'], '$1https:', $input);

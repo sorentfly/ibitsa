@@ -1,7 +1,7 @@
 <?php
 
 $domains = [
-    'abitu' => [
+    'bitsa' => [
         'domain'        => BITSA_SITE /* !domain constants must to defined in configs in root! For good local/sandbox project deploying. */,
         'title'         => 'iBitsa',                                                # site_name
         'description'   => 'Социальная сеть для всех людей на планете.',

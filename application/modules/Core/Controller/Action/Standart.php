@@ -183,7 +183,7 @@ abstract class Core_Controller_Action_Standard extends Engine_Controller_Action
         }
         if (('default' == $currentLayout || !$currentLayout) && $this->_getParam('module', false)) {
             // Increment page views and referrer
-            /* Abitu: temporary statistics DEPRECATE -no need to do updates/inserts each request
+            /* bitsa: temporary statistics DEPRECATE -no need to do updates/inserts each request
             Engine_Api::_()->getDbtable('statistics', 'core')->increment('core.views');
             Engine_Api::_()->getDbtable('referrers', 'core')->increment();
             */

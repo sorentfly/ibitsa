@@ -1,5 +1,5 @@
 <? if (!$this->isSmoothBox){ ?>
-    <h2><?=$this->translate("Create an uniform Abitu.Net account")?></h2>
+    <h2><?=$this->translate("Create an uniform bitsa.Net account")?></h2>
     <?
     if ($this->enableSocials)
     {
@@ -159,7 +159,7 @@
         <? if (Engine_Api::_()->core()->getNowDomainSettings()['key'] == 'mipt_conference'){ ?>
             Регистрация
         <? }else{ ?>
-            <?=$this->translate('First time on Abitu.Net?')?>
+            <?=$this->translate('First time on bitsa.Net?')?>
         <? } ?>
         <a href="javascript:void(0)" onclick="parent.Smoothbox.close();" class="obj-login-modal__header-exit-btn"></a>
     </h2>
@@ -172,7 +172,7 @@
                 <?=$this->partial('_loginSocials.tpl','user')?>
             </div>
         <? } ?>
-        <p class="description"><?=$this->translate('If you have account')?> <A HREF="http://<?=ABITU_SITE?>">Abitu.Net</A><?=$this->translate(' - use it to log in here.')?></p>
+        <p class="description"><?=$this->translate('If you have account')?> <A HREF="http://<?=bitsa_SITE?>">bitsa.Net</A><?=$this->translate(' - use it to log in here.')?></p>
         <p><?=$this->translate("Use your login and password to send verify account message twice, if you haven't recived this one.")?> </p>
     </div>
 <? } ?>

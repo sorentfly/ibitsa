@@ -18,8 +18,8 @@ class User_Form_Special_KpkFiles extends Engine_Form
             ->setTitle('Файлы');
 
         $this
-            ->addPrefixPath('Abitu_Form_Decorator', 'Engine/Abitu_Form/Decorator', 'decorator')
-            ->addPrefixPath('Abitu_Form_Element', 'Engine/Abitu_Form/Element', 'element');
+            ->addPrefixPath('Bitsa_Form_Decorator', 'Engine/Bitsa_Form/Decorator', 'decorator')
+            ->addPrefixPath('Bitsa_Form_Element', 'Engine/Bitsa_Form/Element', 'element');
 
 
   /*      $passport = $this->createElement('File', 'passport', array(

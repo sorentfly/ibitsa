@@ -280,9 +280,9 @@ var registration = function(event) {
         }
     }}
     sendData['mobilephone_country'] =  document.getElementById("mobilephone_country").value;
-    let abituCaptcha = jQuery("#abitu_captcha");
-    if (abituCaptcha.length > 0)
-        sendData['abitu_captcha'] =  abituCaptcha.val();
+    let bitsaCaptcha = jQuery("#bitsa_captcha");
+    if (bitsaCaptcha.length > 0)
+        sendData['bitsa_captcha'] =  bitsaCaptcha.val();
 
     window.ajaxSended = true;
     jQuery.ajax({

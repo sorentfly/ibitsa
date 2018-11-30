@@ -29,7 +29,7 @@
     <div class="verified_tip" onmouseover="pageVerifiedTipShow();" onmouseout="pageVerifiedTipHide();" style="display: none;">
         <i class="triangle_top"></i>
         <h5><?=$this->translate('Verified account'); ?></h5>
-        <?=$this->translate('This tick shows that %1$s page has been verified by the Abitu.Net team', $this->first_name_genetive); ?>
+        <?=$this->translate('This tick shows that %1$s page has been verified by the bitsa.Net team', $this->first_name_genetive); ?>
     </div>
     <br/>
 <? endif; ?>

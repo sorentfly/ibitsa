@@ -163,7 +163,7 @@ class Engine_Filter_Html implements Zend_Filter_Interface
     //FIX bug with mspace tag
     $text = preg_replace('@<\s*mspace[^>/]*>@i', '<mspace linebreak="newline"/>', $text);
     $text = preg_replace('@</mn><mo>,</mo><mn>@i', ',', $text);
-    //FIX abitu: tinymce workaround
+    //FIX bitsa: tinymce workaround
     $text = str_replace('<p></p>', '<p><br/></p>', $text);
     //not filter text for admins
     if ($this->_notFilterToAdmin &&  class_exists('Engine_Api') && ($viewer = Engine_Api::_()->user()->getViewer()) && $viewer->getIdentity() && ($viewer->level_id == 1 || $viewer->level_id == 2 ) )

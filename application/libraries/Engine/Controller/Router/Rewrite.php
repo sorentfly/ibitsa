@@ -1,6 +1,6 @@
 <?php
 /**
- * Abitu
+ * bitsa
  *
  * @author     Goncharov ( sunnydayd@mail.ru )
  * @description роутер, наследующийся от реврайченого - позволяет получать по роутам профиля короткие ссылки. 

@@ -17,8 +17,8 @@
     <div style="float: left; margin-right: 10px;"><?=$this->translate('To invite your friend use this link: '); ?><input readonly="readonly" size="<?=strlen($this->link);?>" type="text" value="<?=$this->link?>"/></div>
     <!--div style="float: left;"><script type="text/javascript">document.write(VK.Share.button({url: "<?=$this->link?>",
                 description: "Уважаемые школьники 7-11 классов! Приглашаем вас всех к участию в первом туре олимпиады «Физтех» 2015 года. Участие в нашей олимпиаде позволяет получить льготы  при поступлении в МФТИ и другие топовые вузы России: победители и призёры очного (второго) этапа олимпиады по физике и/или по математике смогут зачесть 100 баллов ЕГЭ по соответствующей их диплому дисциплине.",
-                title: "<?=ABITU_SITE;?> — онлайн-этап олимпиады «Физтех»",
-                image: "http://<?=ABITU_SITE;?>/public/admin/olymp_logo.png",
+                title: "<?=bitsa_SITE;?> — онлайн-этап олимпиады «Физтех»",
+                image: "http://<?=bitsa_SITE;?>/public/admin/olymp_logo.png",
                 noparse: false}, {type: "round_nocount", text: "Рассказать друзьям"}));</script></div-->
 </div>
 <br/>    
@@ -53,7 +53,7 @@
 
                 $width_div = 650 * $user['referrals_count']/$maxref;            
             
-                echo '<li class="' . $lineclass . '"><div class="place">' . $i . '.</div><a class="user" href="http://' . ABITU_SITE . '/profile/' . $user['idmaster'] . '" target="_blank">' . $user['master_name'] . '</a><div class="bar ref_bar" style="width:' . $width_div . 'px">' . $user['referrals_count'] . '</div></li>';
+                echo '<li class="' . $lineclass . '"><div class="place">' . $i . '.</div><a class="user" href="http://' . bitsa_SITE . '/profile/' . $user['idmaster'] . '" target="_blank">' . $user['master_name'] . '</a><div class="bar ref_bar" style="width:' . $width_div . 'px">' . $user['referrals_count'] . '</div></li>';
                 $i++;
             }
         }
@@ -158,7 +158,7 @@
                     <? foreach ($this->detail_list[$i] as $key => $value): ?>
                         <? if(!($key === 'idreferral' || $key === 'idslave')): ?>
                             <? if($key === 'referral_name'): ?>
-                                <td><a href="http://<?=ABITU_SITE;?>/profile/<?=$this->detail_list[$i]['idslave'];?>" target="_blank"><?=$value;?></a></td>
+                                <td><a href="http://<?=bitsa_SITE;?>/profile/<?=$this->detail_list[$i]['idslave'];?>" target="_blank"><?=$value;?></a></td>
                             <? elseif($key === 'location'): ?>
                                 <td><?=$value;?></td>
                             <? elseif($key === 'user_agent' && is_array($value)): ?>

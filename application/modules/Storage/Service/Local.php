@@ -83,11 +83,11 @@ class Storage_Service_Local extends Storage_Service_Abstract
 
   public function read(Storage_Model_File $model)
   {
-      if (defined('ENABLE_OLDFILE_ABSOLUTE_PATH_TO_ABITU') && defined('OLDFILE_LIMIT_DATE')
-          && ENABLE_OLDFILE_ABSOLUTE_PATH_TO_ABITU
+      if (defined('ENABLE_OLDFILE_ABSOLUTE_PATH_TO_bitsa') && defined('OLDFILE_LIMIT_DATE')
+          && ENABLE_OLDFILE_ABSOLUTE_PATH_TO_bitsa
           && strtotime($model->creation_date)  <= strtotime(OLDFILE_LIMIT_DATE)
       ){
-          $file = 'http:' . ENABLE_OLDFILE_ABSOLUTE_PATH_TO_ABITU . '/'. $model->storage_path;
+          $file = 'http:' . ENABLE_OLDFILE_ABSOLUTE_PATH_TO_bitsa . '/'. $model->storage_path;
       }else{
           $file = APPLICATION_PATH . '/' . $model->storage_path;
       }
@@ -125,12 +125,12 @@ class Storage_Service_Local extends Storage_Service_Abstract
 
   public function temporary(Storage_Model_File $model)
   {
-    if (defined('ENABLE_OLDFILE_ABSOLUTE_PATH_TO_ABITU') && defined('OLDFILE_LIMIT_DATE')
-          && ENABLE_OLDFILE_ABSOLUTE_PATH_TO_ABITU
+    if (defined('ENABLE_OLDFILE_ABSOLUTE_PATH_TO_bitsa') && defined('OLDFILE_LIMIT_DATE')
+          && ENABLE_OLDFILE_ABSOLUTE_PATH_TO_bitsa
           && strtotime($model->creation_date)  <= strtotime(OLDFILE_LIMIT_DATE)
     ){
         try {
-            $rfh = fopen('http:' . ENABLE_OLDFILE_ABSOLUTE_PATH_TO_ABITU . '/'. $model->storage_path, 'r');
+            $rfh = fopen('http:' . ENABLE_OLDFILE_ABSOLUTE_PATH_TO_bitsa . '/'. $model->storage_path, 'r');
         } catch( Exception $e ) {
             throw $e;
         }

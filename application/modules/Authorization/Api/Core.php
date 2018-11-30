@@ -131,7 +131,7 @@ class Authorization_Api_Core extends Core_Api_Abstract
         }
     }
     
-    /*ABITU modification - items can rule ACL by themself*/
+    /*bitsa modification - items can rule ACL by themself*/
     if( is_object($resource) )
     {
       if ( ($role instanceof User_Model_User) && !($resource instanceof Zftsh_Model_Academy) ){
@@ -165,7 +165,7 @@ class Authorization_Api_Core extends Core_Api_Abstract
       if ($action == 'edit_comment'){
           $action = 'edit';
       }
-      /*ABITU modification - END */
+      /*bitsa modification - END */
 
       if( !is_string($action) )
       {

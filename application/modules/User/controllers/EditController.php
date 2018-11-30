@@ -136,8 +136,8 @@ class User_EditController extends Core_Controller_Action_User
     		
     		$profileTabs['social_profiles'] = $this->view->translate('Profiles in social networks');
     		
-    		$baseAuthHref = 'http://' . ABITU_SITE . '/';
-    		$domainTo = $domSet['key'] == 'abitu' ? '' : $domSet['key'];
+    		$baseAuthHref = 'http://' . bitsa_SITE . '/';
+    		$domainTo = $domSet['key'] == 'bitsa' ? '' : $domSet['key'];
     		$_SESSION['crossDomainSocialAuthDomain'] = $domainTo;
     		
     		$vkRedirectUri = $baseAuthHref . 'simple_api/social_auth.php?method=vk_linking';

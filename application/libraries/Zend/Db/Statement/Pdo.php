@@ -226,7 +226,7 @@ class Zend_Db_Statement_Pdo extends Zend_Db_Statement implements IteratorAggrega
             return $this->_stmt->execute($params);
         } catch (PDOException $e) {
 
-            /*Abitu.Net modified.*/
+            /*bitsa.Net modified.*/
             if (!$this->_adapter->getConnection()->inTransaction() &&
                 (mb_stripos($e->getMessage(), 'ost connection')!==false || mb_stripos($e->getMessage(), 'server has gone away')!==false || mb_stripos($e->getMessage(), 'segfault')!==false) ){
                 $this->_adapter->closeConnection();

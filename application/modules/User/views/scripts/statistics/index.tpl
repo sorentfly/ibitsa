@@ -104,8 +104,8 @@ $this->headLink()->appendStylesheet('/application/modules/Core/externals/styles/
                     <label for="reg_site">Регистрационный сайт</label>
                     <select id="reg_site" name="reg_site">
                         <option value="">Не важно</option>
-                        <option label="abitu.net"<? if($_REQUEST['reg_site'] === 'abitu.net'): ?> selected="selected"<? endif; ?> value="abitu.net">abitu.net</option>
-                        <option label="<?=ABITU_SITE?>"<? if($_REQUEST['reg_site'] === ABITU_SITE): ?> selected="selected"<? endif; ?> value="<?=ABITU_SITE?>"><?=ABITU_SITE?></option>
+                        <option label="bitsa.net"<? if($_REQUEST['reg_site'] === 'bitsa.net'): ?> selected="selected"<? endif; ?> value="bitsa.net">bitsa.net</option>
+                        <option label="<?=bitsa_SITE?>"<? if($_REQUEST['reg_site'] === bitsa_SITE): ?> selected="selected"<? endif; ?> value="<?=bitsa_SITE?>"><?=bitsa_SITE?></option>
                         
                         <option label="<?=SCHOOL_OLYMPICS_SITE?>"<? if($_REQUEST['reg_site'] === SCHOOL_OLYMPICS_SITE): ?> selected="selected"<? endif; ?> value="<?=SCHOOL_OLYMPICS_SITE?>"><?=SCHOOL_OLYMPICS_SITE?></option>
                         <option label="<?=MASTER_OLYMPICS_SITE?>"<? if($_REQUEST['reg_site'] === MASTER_OLYMPICS_SITE): ?> selected="selected"<? endif; ?> value="<?=MASTER_OLYMPICS_SITE?>"><?=MASTER_OLYMPICS_SITE?></option>

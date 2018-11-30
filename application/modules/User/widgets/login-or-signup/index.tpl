@@ -6,7 +6,7 @@ if ($this->authorized){
     }
     if ($this->noSessionTransfer) return;
     ?>
-    <iframe src="https://<?=ABITU_SITE?>/?crossdomainCookiesAuth=<?=session_id()?>" width="0" height="0" style="position:absolute;">
+    <iframe src="https://<?=bitsa_SITE?>/?crossdomainCookiesAuth=<?=session_id()?>" width="0" height="0" style="position:absolute;">
     </iframe>
 <? 
 return;
@@ -16,8 +16,8 @@ return;
 <script src="/externals/jReject-master/js/jquery.reject.js"></script>
 <script src="/externals/jquery-hideShowPassword/hideShowPassword.min.js"></script>
 
-<? if ($_SERVER['HTTP_HOST'] != ABITU_SITE){ /*very fast cross-domain request - 1ms*/ ?>
-<iframe src="https://<?=ABITU_SITE?>/?crossdomainCookiesAuth=0" width="0" height="0" style="position:absolute;">
+<? if ($_SERVER['HTTP_HOST'] != bitsa_SITE){ /*very fast cross-domain request - 1ms*/ ?>
+<iframe src="https://<?=bitsa_SITE?>/?crossdomainCookiesAuth=0" width="0" height="0" style="position:absolute;">
 </iframe>
 <?php } ?>
 
@@ -219,7 +219,7 @@ return;
 
                     </div>
                     <div class="obj-login-modal__flex-item">
-                        <img src="/public/admin/abitu_logo_main.png" alt="" class="obj-login-modal__header-img-logo">
+                        <img src="/public/admin/bitsa_logo_main.png" alt="" class="obj-login-modal__header-img-logo">
                     </div>
                     <div class="obj-login-modal__flex-item mod-sidebar">
                         <a href="javascript:void(0)" onclick="Smoothbox.close();" class="obj-login-modal__header-exit-btn"></a>
@@ -246,7 +246,7 @@ return;
                                 $label = $this->translate('Login into the school cabinet');
                             }
                         }else{
-                            $label = $this->translate('Login with AbituNet account');
+                            $label = $this->translate('Login with bitsaNet account');
                         } ?>
                         <?=$label?>
                     </div>
@@ -265,7 +265,7 @@ return;
                 </div>
                 <?php if (!$this->enableSocials){ ?>
                 <div class="obj-login-modal__tip">
-                    <?=$this->translate("You can use Abitu.Net account for login.")?>
+                    <?=$this->translate("You can use bitsa.Net account for login.")?>
                 </div>
                 <?php } ?>
                 <div class="obj-login-modal__footer">
@@ -276,7 +276,7 @@ return;
                             </div>
                             <? if (!$isZftsh){ ?>
                                 <div>
-                                    <a class="obj-login-modal__footer-links blue" title="Регистрация на Abitu.Net" href="/signup/" onclick="globalRegisterOpen(event)"><?=$this->translate('Registration')?></a>
+                                    <a class="obj-login-modal__footer-links blue" title="Регистрация на bitsa.Net" href="/signup/" onclick="globalRegisterOpen(event)"><?=$this->translate('Registration')?></a>
                                 </div>
                             <? } ?>
                         </div>

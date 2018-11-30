@@ -30,7 +30,7 @@ class Core_Api_Mail extends Core_Api_Abstract
             'recipient_title' => $user->getTitle(),
             'recipient_link' => $user->getHref(),
             'recipient_photo' => $user->getPhotoUrl('thumb.icon'),
-            'object_link' => 'http://abitu.net/some',
+            'object_link' => 'http://bitsa.net/some',
             'queue' => false,
         ));
         die();*/
@@ -567,7 +567,7 @@ class Core_Api_Mail extends Core_Api_Abstract
                         $baseUrl = 'https://'.$DS[$object->domain]['domain'];
                     }
                 }
-                if (!$baseUrl) $baseUrl = 'https://'.ABITU_SITE_ORIGINAL;
+                if (!$baseUrl) $baseUrl = 'https://'.bitsa_SITE_ORIGINAL;
                 Zend_Controller_Front::getInstance()->setBaseUrl($baseUrl);
                 return '[header]<br/> '. $notification->getContent() . ' <br/>[footer]';
             }
