@@ -4,7 +4,7 @@
 # Installation folder
 /private/
 #
-!/private/deploy/
+!/private/deploy/sql/
 # Files required to deploy an application
 /public/
 # CSS/LESS/etc
