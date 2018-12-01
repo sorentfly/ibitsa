@@ -369,7 +369,6 @@ class Core_Bootstrap extends Engine_Application_Bootstrap_Abstract
      */
     protected function _initFrontControllerModules()
     {
-        die('front-controller');
         $frontController = Zend_Controller_Front::getInstance();
         $path = APPLICATION_PATH_MOD;
 

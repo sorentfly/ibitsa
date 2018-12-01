@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+<!-- $Id: offline.html 9128 2011-08-01 21:26:30Z john $ -->
+<head>
+    <title>We're sorry!</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style type="text/css">
+        *
+        {
+            font-family: tahoma, arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #content
+        {
+            width: 500px;
+            margin: 250px auto 0 auto;
+        }
+        #message
+        {
+            display: block;
+            font-size: 18pt;
+            font-weight: bold;
+            letter-spacing: -1px;
+            text-align: center;
+        }
+        #message .caption
+        {
+            display: block;
+            font-size: .8em;
+        }
+        #code
+        {
+            margin-top: 20px;
+            padding: 20px;
+            background: #fff9e2;
+            border: 3px dashed #dad1b0;
+            text-align: center;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+        }
+        #code > span
+        {
+            font-weight: bold;
+            font-size: 1.1em;
+            letter-spacing: -1px;
+        }
+        #code .codebox
+        {
+            padding: 3px;
+        }
+        #code .submit
+        {
+            padding: 5px;
+            font-weight: bold;
+            margin-left: 3px;
+        }
+        #code .submit:hover
+        {
+            cursor: pointer;
+        }
+        #error-code
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div id="content">
+      <span id="message">
+        We're sorry!
+        <span class="caption">We are currently experiencing some technical issues. Please try again later.</span>
+      </span>
+    <br />
+    <div id="error-code">
+        %__ERROR_CODE__%
+        </span>
+    </div>
+
+</body>
+</html>

@@ -235,7 +235,7 @@ if (_ENGINE_R_MAIN) {                                               # |- Sub app
     # |- Bootstrap required module
     $application->bootstrap();
     # |- Fatal catching
-    require_once ENGINE_FATAL_HANDLER;
+    include ENGINE_FATAL_HANDLER;
     # |- Run an application
     $application->run();
 }

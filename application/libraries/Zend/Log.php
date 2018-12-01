@@ -159,9 +159,10 @@ class Zend_Log
     /**
      * Construct a writer object based on a configuration array
      *
-     * @param  array $spec config array with writer spec
+     * @param $config
      * @return Zend_Log_Writer_Abstract
      * @throws Zend_Log_Exception
+     * @internal param array $spec config array with writer spec
      */
     protected function _constructWriterFromConfig($config)
     {
@@ -348,8 +349,8 @@ class Zend_Log
      *     instead of
      *   $log->log('message', Zend_Log::PRIORITY_NAME)
      *
-     * @param  string  $method  priority name
-     * @param  string  $params  message to log
+     * @param  string|array  $method  priority name
+     * @param  string|array  $params  message to log
      * @return void
      * @throws Zend_Log_Exception
      */
@@ -441,8 +442,9 @@ class Zend_Log
     /**
      * Add a custom priority
      *
-     * @param  string   $name      Name of priority
-     * @param  integer  $priority  Numeric priority
+     * @param  string  $name Name of priority
+     * @param  integer $priority Numeric priority
+     * @return $this
      * @throws Zend_Log_Exception
      */
     public function addPriority($name, $priority)
@@ -496,6 +498,7 @@ class Zend_Log
      *
      * @param  mixed $writer Zend_Log_Writer_Abstract or Config array
      * @return Zend_Log
+     * @throws Zend_Log_Exception
      */
     public function addWriter($writer)
     {

@@ -749,6 +749,7 @@ class Engine_Api
      * Exception handler
      *
      * @param Exception $exception
+     * @return bool
      */
     static public function handleException($exception)
     {
@@ -756,24 +757,25 @@ class Engine_Api
         if( Zend_Registry::isRegistered('Zend_Log') ) {
 
             // Ignore Engine_Exception since it has built-in logging
-            if( !($exception instanceof Engine_Exception) ) {
+            # if( !($exception instanceof Engine_Exception) ) {
+            if( 1 ) {
                 $log = Zend_Registry::get('Zend_Log');
-                $output = PHP_EOL .'Error Code: ' . self::getErrorCode(true) . PHP_EOL ;
-                if (!empty($_SERVER['REQUEST_URI'])){
-                    $output .= 'URL: '.(_ENGINE_SSL ? 'https://' : 'http://').$_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']. PHP_EOL;
+                $output = PHP_EOL . 'Error Code: ' . self::getErrorCode(TRUE) . PHP_EOL;
+                if (!empty($_SERVER['REQUEST_URI'])) {
+                    $output .= 'URL: ' . (_ENGINE_SSL ? 'https://' : 'http://') . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] . PHP_EOL;
                 }
-                if (!empty($_SERVER['HTTP_REFERER'])){
-                    $output .= 'REFERER: '. $_SERVER['HTTP_REFERER']. PHP_EOL;
+                if (!empty($_SERVER['HTTP_REFERER'])) {
+                    $output .= 'REFERER: ' . $_SERVER['HTTP_REFERER'] . PHP_EOL;
                 }
-                if (!empty($_POST)){
-                    $output.= "POST:\n" . json_encode( Engine_Api::_()->string()->filterLongVarList($_POST), JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE) . PHP_EOL;
+                if (!empty($_POST)) {
+                    $output .= "POST:\n" . json_encode(Engine_Api::_()->string()->filterLongVarList($_POST), JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE) . PHP_EOL;
                 }
 
-                if (Engine_Api::_()->hasModuleBootstrap('user')){
-                    if ( ($viewer = Engine_Api::_()->user()->getViewer()) && $viewer->getIdentity()){
-                        $output .= 'VIEWER: '.$viewer->getIdentity(). PHP_EOL;
-                    }else{
-                        $output .= 'VIEWER: no'.PHP_EOL;
+                if (Engine_Api::_()->hasModuleBootstrap('user')) {
+                    if (($viewer = Engine_Api::_()->user()->getViewer()) && $viewer->getIdentity()) {
+                        $output .= 'VIEWER: ' . $viewer->getIdentity() . PHP_EOL;
+                    } else {
+                        $output .= 'VIEWER: no' . PHP_EOL;
                     }
                 }
                 $output .= $exception->__toString() . PHP_EOL;
@@ -858,7 +860,7 @@ class Engine_Api
         }
 
         // Make body
-        $body = file_get_contents(APPLICATION_PATH . '/application/offline.html');
+        $body = file_get_contents(APPLICATION_PATH_MOULD . DS . 'log.html');
         $body = str_replace('%__ERROR_CODE__%', 'Error code: ' .  self::getErrorCode(), $body);
 
         // Send firephp headers

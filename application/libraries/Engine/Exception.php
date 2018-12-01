@@ -27,10 +27,15 @@ class Engine_Exception extends Exception
 
   static protected $_exitImmediately = false;
 
-  /**
-   * Inject logging logic
-   * @see Exception
-   */
+    /**
+     * Inject logging logic
+     *
+     * @see Exception
+     *
+     * @param string          $message
+     * @param int             $code
+     * @param \Exception|null $previous
+     */
   public function __construct($message = '', $code = 0, Exception $previous = null)
   {
     if( version_compare(PHP_VERSION, '5.3.0') >= 0 ) { // Add previous if we're >= 5.3.0

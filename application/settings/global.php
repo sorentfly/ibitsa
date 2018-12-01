@@ -72,8 +72,11 @@ if (!defined('ENGINE_CONF__PATH_CONSTANTS')) {
     defined('APPLICATION_PATH_SET')     ||
     define('APPLICATION_PATH_SET',          APPLICATION_PATH_COR . DS . 'settings');        # |_____Application_settings_path;
 
+    defined('APPLICATION_PATH_MOULD')   ||
+    define('APPLICATION_PATH_MOULD',        APPLICATION_PATH_COR . DS . 'moulds');          # |_____Application_moulds_path;
+
     defined('APPLICATION_COMPOSER')     ||
-    define('APPLICATION_COMPOSER',          APPLICATION_PATH . DS . 'vendor');                   # |_____Composer_path;
+    define('APPLICATION_COMPOSER',          APPLICATION_PATH . DS . 'vendor');              # |_____Composer_path;
 
     defined('APPLICATION_COMPOSER_AL')  ||
     define('APPLICATION_COMPOSER_AL',       APPLICATION_COMPOSER . DS . 'autoload.php');    # |_____Composer_autoload_path;
@@ -248,6 +251,9 @@ if (!defined('ENGINE_CONF__FILES')) {
 
     defined('ENGINE_FATAL_HANDLER')     ||
     define('ENGINE_FATAL_HANDLER',          APPLICATION_PATH_SET . DS . 'fatal.php');
+
+    defined('ENGINE_LOG_TEMPLATE')      ||
+    define('ENGINE_LOG_TEMPLATE',           APPLICATION_PATH_SET . DS . 'fatal.php');
 }
 ########################################################################################################################
 
