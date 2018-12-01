@@ -4,6 +4,8 @@
 # Installation folder
 /private/
 #
+!/private/deploy/
+# Files required to deploy an application
 /public/
 # CSS/LESS/etc
 /temporary/
