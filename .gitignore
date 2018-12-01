@@ -4,7 +4,7 @@
 # Installation folder
 /private/
 #
-!/private/deploy/sql/
+!/private/deploy/sql/solid.sql
 # Files required to deploy an application
 /public/
 # CSS/LESS/etc
