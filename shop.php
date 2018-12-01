@@ -21,7 +21,10 @@ if($_SESSION['id']==0)
     exit();
 }
 $count = 0;
-$mysqli=new mysqli("localhost","root","","bitsa_tmp");
+
+/* @var $mysqli \mysqli */
+$mysqli = include CONNECT__DB;
+
 $mysqli->query("SET NAMES 'utf8'");
 $id = $_SESSION['id'];
 $select =  $mysqli->query( "SELECT IdUserTo,IdUserFrom FROM Friends WHERE IdUserFrom = '$id'");
@@ -43,7 +46,10 @@ while($row= $select->fetch_assoc())
 $json = json_encode($arrayOfUsers);
 $jsonIndex = json_encode($arrayOfId);
 $mysqli->close();
-$mysqli=new mysqli("localhost","root","","bitsa_tmp");
+
+/* @var $mysqli \mysqli */
+$mysqli = include CONNECT__DB;
+
 $select =  $mysqli->query( "SELECT NameCategory, Count FROM Category");
 while ($row= $select->fetch_assoc()) {
     $categorys[] = $row['NameCategory'];
@@ -56,7 +62,9 @@ $jsonCateg = json_encode($categorys);
 $jsonCount = json_encode($counts);
 $mysqli->close();
 
-$mysqli=new mysqli("localhost","root","","bitsa_tmp");
+/* @var $mysqli \mysqli */
+$mysqli = include CONNECT__DB;
+
 $select =  $mysqli->query( "SELECT NameProduct, Price, Image FROM Products");
 while ($row= $select->fetch_assoc()) {
     $product[] = $row['NameProduct'];

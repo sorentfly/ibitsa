@@ -1,6 +1,8 @@
 <?php
 
-$mysqli=new mysqli("localhost","root","","bitsa_tmp");
+/* @var $mysqli \mysqli */
+$mysqli = include CONNECT__DB;
+
 $select =  $mysqli->query( "SELECT Name_object FROM Objects");
 while($row= $select->fetch_assoc())
 {
@@ -78,9 +80,10 @@ $mysqli->close();
     }
 
 
-    
 
-    $connect =new mysqli("localhost","root","","bitsa_tmp");
+
+    /* @var $mysqli \mysqli */
+    $connect = include CONNECT__DB;
 
     if($connect->query("insert into Homework (Home_File) values ('$string')"))
         echo "1";

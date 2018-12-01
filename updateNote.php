@@ -15,7 +15,9 @@ $text =  $_POST['content'];
 $oldName = $_POST['oldName'];
 $addDate=date("Y-m-d H:i:s");
 
-$connect =new mysqli("localhost","root","","bitsa_tmp");
+/* @var $mysqli \mysqli */
+$mysqli = include CONNECT__DB;
+
 $connect->query("SET NAMES 'utf8'");
 if(  $connect->query("UPDATE Notes SET NoteName='$name', Content='$text', ChangeDate='$addDate' WHERE IdUser='$id' AND Id_Note='$oldName'"))
     echo 1;

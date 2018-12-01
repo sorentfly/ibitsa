@@ -14,8 +14,8 @@ $secondName=$_POST['inputSecondName'];
 $city=$_POST['inputCity'];
 $nick=$_POST['inputNick'];
 
-
-$connect =new mysqli("localhost","root","","bitsa_tmp");
+/* @var $mysqli \mysqli */
+$mysqli = include CONNECT__DB;
 
 if($connect->query("UPDATE users SET FirstName = '$firstName',SecondName='$secondName',City='$city',Nick='$nick' WHERE Id_User = '$id'"))
     echo "OK";

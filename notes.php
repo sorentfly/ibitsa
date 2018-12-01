@@ -19,7 +19,10 @@ if($_SESSION['id']==0)
     exit();
 }
 $count = 0;
-$mysqli=new mysqli("localhost","root","","bitsa_tmp");
+
+/* @var $mysqli \mysqli */
+$mysqli = include CONNECT__DB;
+
 $mysqli->query("SET NAMES 'utf8'");
 $id = $_SESSION['id'];
 $select =  $mysqli->query( "SELECT IdUserTo,IdUserFrom FROM Friends WHERE IdUserFrom = '$id'");
@@ -44,22 +47,24 @@ $mysqli->close();
 $id = $_SESSION['id'];
 date_default_timezone_set('Europe/Moscow');
 
-    $mysqli = new mysqli("localhost", "root", "", "bitsa_tmp");
-    $mysqli->query("SET NAMES 'utf8'");
-    $select =  $mysqli->query( "SELECT * FROM Notes WHERE IdUser = '$id'");
-    while($row= $select->fetch_assoc()) {
+/* @var $mysqli \mysqli */
+$mysqli = include CONNECT__DB;
+
+$mysqli->query("SET NAMES 'utf8'");
+$select =  $mysqli->query( "SELECT * FROM Notes WHERE IdUser = '$id'");
+while($row= $select->fetch_assoc()) {
     $textNote[] = $row['Content'];
     $nameNote[] = $row['NoteName'];
     $dateCreate[] = $row['CreateDate'];
     $dateChange[] = $row['ChangeDate'];
     $idNote[] = $row['Id_Note'];
-    }
-    $mysqli->close();
-    $jsonContent = json_encode($textNote, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP | JSON_UNESCAPED_UNICODE  );
-    $jsonName = json_encode($nameNote, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP | JSON_UNESCAPED_UNICODE  );
-    $jsonCreate = json_encode($dateCreate, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP | JSON_UNESCAPED_UNICODE  );
-    $jsonChange = json_encode($dateChange, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP | JSON_UNESCAPED_UNICODE  );
-    $jsonId = json_encode($idNote, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP | JSON_UNESCAPED_UNICODE  );
+}
+$mysqli->close();
+$jsonContent = json_encode($textNote, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP | JSON_UNESCAPED_UNICODE  );
+$jsonName = json_encode($nameNote, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP | JSON_UNESCAPED_UNICODE  );
+$jsonCreate = json_encode($dateCreate, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP | JSON_UNESCAPED_UNICODE  );
+$jsonChange = json_encode($dateChange, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP | JSON_UNESCAPED_UNICODE  );
+$jsonId = json_encode($idNote, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP | JSON_UNESCAPED_UNICODE  );
 ?>
 
 <!doctype html>

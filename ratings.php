@@ -7,8 +7,6 @@
  */
 
 $string = "This is a test";
-echo ereg_replace (" is", " was", $string);
-echo ereg_replace ("( )is", "\\1was", $string);
-echo ereg_replace ("(( )is)", "\\2was", $string);
-
-?>
+echo preg_replace (" is", " was", $string);
+echo preg_replace ("( )is", "\\1was", $string);
+echo preg_replace ("(( )is)", "\\2was", $string);

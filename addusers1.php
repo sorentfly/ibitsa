@@ -9,8 +9,10 @@
 session_start();
 $id=$_SESSION['id'];
 $idAdd = $_POST['idFriend'];
-$addDate=date("Y-m-d");   
-$connect =new mysqli("localhost","root","","bitsa_tmp");
+$addDate=date("Y-m-d");
+
+/* @var $mysqli \mysqli */
+$mysqli = include CONNECT__DB;
 
 if($connect->query("insert into Friends (IdUserFrom,IdUserTo,DateAdd) values ('$id','$idAdd','$addDate')"))
     echo "1";

@@ -20,7 +20,10 @@ if($_SESSION['id']==0)
     exit();
 }
     $count = 0;
-    $mysqli=new mysqli("localhost","root","","bitsa_tmp");
+
+    /* @var $mysqli \mysqli */
+    $mysqli = include CONNECT__DB;
+
     $mysqli->query("SET NAMES 'utf8'");
     $id = $_SESSION['id'];
     $select =  $mysqli->query( "SELECT IdUserTo,IdUserFrom FROM Friends WHERE IdUserFrom = '$id'");

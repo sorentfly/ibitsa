@@ -1,5 +1,5 @@
-CREATE SCHEMA IF NOT EXISTS bitsa_tmp;
-USE bitsa_tmp;
+CREATE DATABASE IF NOT EXISTS bitsa_dev;
+USE bitsa_dev;
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -13,7 +13,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- База данных: `bitsa_tmp`
+-- База данных: `bitsa_dev`
 --
 
 -- --------------------------------------------------------

@@ -8,7 +8,9 @@
 
 header('Content-Type: text/html; charset=utf-8');//asd
 session_start();
-$mysqli=new mysqli("localhost","root","","bitsa_tmp");
+
+/* @var $mysqli \mysqli */
+$mysqli = include CONNECT__DB;
 
 $id = $_SESSION['id'];
 $arr = array();

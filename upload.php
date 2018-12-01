@@ -20,4 +20,3 @@ if(is_uploaded_file($_FILES["filename"]["tmp_name"]))
 } else {
     echo("Ошибка загрузки файла");
 }
-?>
