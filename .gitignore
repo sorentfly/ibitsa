@@ -6,6 +6,8 @@
 #
 !/private/deploy/sql/solid.sql
 # Files required to deploy an application
+/*.config.php
+!/example.config.php
 /public/
 # CSS/LESS/etc
 /temporary/

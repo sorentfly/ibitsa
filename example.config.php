@@ -29,24 +29,26 @@ if (!defined('_ENGINE_APPLICATION')) {
 
     # |>---- Personal info
     defined('_DEVELOPER_EMAIL')            ||
-    define('_DEVELOPER_EMAIL',                 'stuf.developer@gmail.com');                                             # Email of a developer
+    define('_DEVELOPER_EMAIL',                 'TO_CHANGE');                                                            # Email of a developer
 
     # |>---- Backend configuration
     # |>---- Cache
+    # |>---- _ENGINE_CACHE_MODE_FILE or _ENGINE_CACHE_MODE_MEMCACHED
     defined('_DEVELOPER__CACHE')           ||
-    define('_DEVELOPER__CACHE',                 _ENGINE_CACHE_MODE_FILE);                                               # Way to cache an application. May be any of [File/Memcached]
+    define('_DEVELOPER__CACHE',                 'TO_CHANGE');                                                           # Way to cache an application. May be any of [File/Memcached]
+
     # |>---- Environment
     defined('_DEVELOPER__ENV_MODE')        ||
     define('_DEVELOPER__ENV_MODE',              _ENGINE_ENVIRONMENT_MODE_DEVELOPMENT);                                  # Environment mode of an application. May be any of [Development/Production]
     # |>---- Database configuration
     defined('_DEVELOPER__DB_HOST')         ||
-    define('_DEVELOPER__DB_HOST',              'localhost');                                                            # Host a DB locates
+    define('_DEVELOPER__DB_HOST',              'TO_CHANGE');                                                            # Host a DB locates
     defined('_DEVELOPER__DB_USER')         ||
-    define('_DEVELOPER__DB_USER',              'root');                                                                 # Username of DB account
+    define('_DEVELOPER__DB_USER',              'TO_CHANGE');                                                            # Username of DB account
     defined('_DEVELOPER__DB_PASSWORD')     ||
-    define('_DEVELOPER__DB_PASSWORD',          '');                                                                     # Password of DB account
+    define('_DEVELOPER__DB_PASSWORD',          'TO_CHANGE');                                                            # Password of DB account
     defined('_DEVELOPER__DB_SCHEME')       ||
-    define('_DEVELOPER__DB_SCHEME',            'bitsa_tmp');                                                            # Scheme of DB account
+    define('_DEVELOPER__DB_SCHEME',            'TO_CHANGE');                                                            # Scheme of DB account
     defined('_DEVELOPER__DB_CHARSET')      ||
     define('_DEVELOPER__DB_CHARSET',           _ENGINE__DB_CHARSET);                                                    # Charset, DB is used to work with
     defined('_DEVELOPER__DB_NS_ADAPTER')   ||
