@@ -21,4 +21,8 @@ if (!defined('_ENGINE_GENERAL')) {
 
     defined('CONNECT__DB')          ||
     define('CONNECT__DB',                   APPLICATION_PATH . DS . 'connectDB.php');
+
+    defined('ERRORS')               ||
+    define('ERRORS',                        0);
 }
+ini_set('display_errors', ERRORS);
