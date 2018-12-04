@@ -1,4 +1,9 @@
 <?php
+$stub = ($home_path = realpath(dirname(__FILE__))) . '/stub.php';
+include_once
+file_exists(($config = $home_path . '/config.php'))
+    ? $config
+    : $stub;
 
 /* @var $mysqli \mysqli */
 $mysqli = include CONNECT__DB;

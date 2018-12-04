@@ -5,6 +5,12 @@
  * Date: 03.11.2018
  * Time: 15:23
  */
+$stub = ($home_path = realpath(dirname(__FILE__))) . '/stub.php';
+include_once
+file_exists(($config = $home_path . '/config.php'))
+    ? $config
+    : $stub;
+
 session_start();
 if(isset($_POST['signOut'])) {
     echo 'asd';

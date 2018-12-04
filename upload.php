@@ -6,6 +6,12 @@
  * Time: 16:32
  */
 
+$stub = ($home_path = realpath(dirname(__FILE__))) . '/stub.php';
+include_once
+file_exists(($config = $home_path . '/config.php'))
+    ? $config
+    : $stub;
+
 if($_FILES["filename"]["size"] > 1024*3*1024)
 {
     echo ("Размер файла превышает три мегабайта");

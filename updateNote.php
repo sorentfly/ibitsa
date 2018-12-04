@@ -6,6 +6,11 @@
  * Time: 15:27
  */
 
+$stub = ($home_path = realpath(dirname(__FILE__))) . '/stub.php';
+include_once
+file_exists(($config = $home_path . '/config.php'))
+    ? $config
+    : $stub;
 
 date_default_timezone_set('Europe/Moscow');
 session_start();

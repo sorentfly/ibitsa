@@ -6,6 +6,12 @@
  * Time: 0:57
  */
 
+$stub = ($home_path = realpath(dirname(__FILE__))) . '/stub.php';
+include_once
+file_exists(($config = $home_path . '/config.php'))
+    ? $config
+    : $stub;
+
 header('Content-Type: text/html; charset=utf-8');//asd
 session_start();
 

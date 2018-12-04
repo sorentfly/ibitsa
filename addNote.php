@@ -1,5 +1,11 @@
 <?
 
+$stub = ($home_path = realpath(dirname(__FILE__))) . '/stub.php';
+include_once
+file_exists(($config = $home_path . '/config.php'))
+    ? $config
+    : $stub;
+
 session_start();
 $id = $_SESSION['id'];
 date_default_timezone_set('Europe/Moscow');
