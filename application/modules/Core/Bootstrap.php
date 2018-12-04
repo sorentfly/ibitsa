@@ -308,7 +308,7 @@ class Core_Bootstrap extends Engine_Application_Bootstrap_Abstract
         // Get log config
         $db = Engine_Db_Table::getDefaultAdapter();
         $logAdapter = $db->select()
-            ->from('Settings', 'value')
+            ->from('core_settings', 'value')
             ->where('`name` = ?', 'core.log.adapter')
             ->query()
             ->fetchColumn();
